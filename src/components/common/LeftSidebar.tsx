@@ -84,7 +84,7 @@ const LeftSidebarStyles = styled.div`
     height: 100vh;
     position: sticky;
     top: 0%;
-    @media (max-width:490px) {
+    @media (max-width:480px) {
         display: none;
   }
     .btn {

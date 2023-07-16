@@ -40,10 +40,13 @@ const HomeStyles = styled.div`
         grid-template-columns: 120px 1fr .7fr;
   }
   @media (max-width:980px) {
-    grid-template-columns: 100px 1fr .3fr;
+    grid-template-columns: 100px 1fr .2fr;
   }
   @media (max-width:780px) {
         grid-template-columns: 100px 1fr;
+  }
+  @media (max-width:480px) {
+        grid-template-columns: 1fr;
   }
   `
 

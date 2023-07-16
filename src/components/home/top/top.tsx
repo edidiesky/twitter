@@ -19,7 +19,7 @@ const TopStyles = styled.div`
     color: #fff;
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.401);
+  background-color: rgba(255, 255, 255, 0.875);
   z-index: 30;
   /* padding: 1rem 0; */
   backdrop-filter: blur(54px);
