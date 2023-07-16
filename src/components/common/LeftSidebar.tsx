@@ -33,6 +33,16 @@ const list = [
         path: '',
         icon: <GoSearch />
 
+    }, {
+        title: "More",
+        path: '',
+        icon: <GoSearch />
+
+    }, {
+        title: "More",
+        path: '',
+        icon: <GoSearch />
+
     },
 ]
 
@@ -77,7 +87,6 @@ const LeftSidebarStyles = styled.div`
     height: 100vh;
     position: sticky;
     top: 10%;
-    border-right: 1px solid rgba(0,0,0,.1);
     @media (max-width:490px) {
         display: none;
   }
@@ -109,9 +118,9 @@ const LeftSidebarStyles = styled.div`
   @media (max-width:1180px) {
     align-items: flex-end;
     justify-content: flex-end;
-    width:6rem;
+    width:7rem;
     justify-content: center;
-    height:6rem;
+    height:7rem;
     /* padding: 0; */
     border-radius: 50%;
     display: grid;
@@ -149,8 +158,8 @@ const LeftSidebarStyles = styled.div`
     align-self: flex-end;
     margin: 0;
     .avatar {
-        width: 5rem !important;
-        height: 5rem !important;
+        width: 6rem !important;
+        height: 6rem !important;
         border-radius: 50%;
     
     }

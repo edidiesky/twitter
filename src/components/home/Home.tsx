@@ -24,10 +24,13 @@ const HomeIndex: React.FC = () => {
 const HomeStyles = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: 22vw 1fr 35vw;
+    grid-template-columns: 22vw 1fr 30vw;
     grid-gap: 1rem;
     min-height: 100vh;
+    
     .wrap {
+        border-right : 1px solid rgba(0,0,0,.1);
+        border-left : 1px solid rgba(0,0,0,.1);
         @media (max-width:980px) {
     border-right : 1px solid rgba(0,0,0,.1);
 

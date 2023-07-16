@@ -62,7 +62,6 @@ const RightSidebarStyles = styled.div`
     height: 100vh;
     position: sticky;
     top: 10%;
-    border-left: 1px solid rgba(0,0,0,.1);
     @media (max-width:980px) {
         display: none;
   }

@@ -1,13 +1,20 @@
+import FeedCard from '@/components/common/FeedCard';
+import { feedData } from '@/data';
+import { feedcardtype } from '@/types/feedtype';
 import React from 'react';
 import styled from 'styled-components';
 
-interface FeedProps {
-}
-const Feed: React.FC<FeedProps> = () => {
+const Feed: React.FC = () => {
     return (
         <div className="w-100">
             <FeedStyles>
-                <h2 className="fs-30">Feed bar</h2>
+                <div className="flex w-100 column">
+                    {
+                        feedData.map((feed:feedcardtype )=> {
+                            return <FeedCard {...feed} />
+                        })
+                    }
+                </div>
             </FeedStyles>
 
         </div>
