@@ -85,18 +85,18 @@ const LeftSidebarStyles = styled.div`
         width:100%;
         
         margin-bottom: 20px;
-    @media (max-width:1080px) {
+    @media (max-width:1180px) {
         display: none;
     }
     }
     .top {
-        @media (max-width:1080px) {
+        @media (max-width:1180px) {
     align-items: flex-end;
     justify-content: flex-end;
   }
     }
     ul {
-        @media (max-width:1080px) {
+        @media (max-width:1180px) {
     align-items: flex-end;
     justify-content: flex-end;
   }
@@ -104,14 +104,26 @@ const LeftSidebarStyles = styled.div`
     li {
         border-radius: 40px;
   text-align: center;
-  padding: 1.4rem 2rem;
+  padding: 1.2rem 2rem;
   font-size: 20px;
-  @media (max-width:1080px) {
+  @media (max-width:1180px) {
     align-items: flex-end;
     justify-content: flex-end;
+    width:6rem;
+    justify-content: center;
+    height:6rem;
+    /* padding: 0; */
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
     span {
         display: none;
     }
+  }
+  @media (max-width:980px) {
+    width:7rem;
+    justify-content: center;
+    height:7rem;
   }
   svg {
     font-size: 30px;
@@ -126,19 +138,41 @@ const LeftSidebarStyles = styled.div`
   padding: 1rem 2rem;
   gap:2px;
   cursor: pointer;
+  @media (max-width:1180px) {
+    width:8rem;
+    justify-content: center;
+    height:8rem;
+    /* padding: 0; */
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    align-self: flex-end;
+    margin: 0;
+    .avatar {
+        width: 5rem !important;
+        height: 5rem !important;
+        border-radius: 50%;
+    
+    }
+    &:hover {
+  background-color: #f7f7f7;
+ 
+  }
+  }
+  
   &:hover {
   background-color: #f7f7f7;
  
   }
   h4 {
-    @media (max-width:1080px) {
+    @media (max-width:1180px) {
         display: none;
   }
 
 }
     }
     .wrapper {
-        width: 75%;
+        width: 80%;
         margin: 0 auto;
         padding-top: 1rem;
     }

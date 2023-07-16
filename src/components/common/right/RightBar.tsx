@@ -9,7 +9,7 @@ const RightSidebarIndex: React.FC<RightSidebarProps> = () => {
     return (
         <div className="w-100 h-100">
             <RightSidebarStyles>
-                <div className="wrapper w-90 flex column gap-2">
+                <div className="wrapper flex column gap-2">
                     <Search />
                     <div className="w-90 auto flex column gap-2">
                         <div className="verfiy_wrapper w-90 auto flex column item-start gap-1">
@@ -39,14 +39,14 @@ const RightSidebarIndex: React.FC<RightSidebarProps> = () => {
                                 }
                             </div>
                         </div>
-                        <div className="flex item-center w-90 auto fs-12 text-light flex-wrap" style={{ gap: ".6rem" }}>
-                            <h4 className='text-light'>Terms of Service</h4>
-                            <h4 className='text-light'>Privacy Policy</h4>
-                            <h4 className='text-light'>Cookie Policy</h4>
-                            <h4 className='text-light'>Ads info</h4>
-                            <h4 className='text-light'>More</h4>
-                            <h4 className='text-light'>Edidiong Essien</h4>
-                            <h4 className='text-light'>© 2023</h4>
+                        <div className="flex item-center w-90 auto fs-14 text-light flex-wrap" style={{ gap: ".6rem" }}>
+                            <h5 className='text-light'>Terms of Service</h5>
+                            <h5 className='text-light'>Privacy Policy</h5>
+                            <h5 className='text-light'>Cookie Policy</h5>
+                            <h5 className='text-light'>Ads info</h5>
+                            <h5 className='text-light'>More</h5>
+                            <h5 className='text-light'>Edidiong Essien</h5>
+                            <h5 className='text-light'>© 2023</h5>
                         </div>
                     </div>
 
@@ -67,6 +67,13 @@ const RightSidebarStyles = styled.div`
         display: none;
   }
   h4 {
+    @media (max-width:1180px) {
+        font-size: 16px;
+        span {
+        font-size: 14px;
+
+        }
+    }
     @media (max-width:1080px) {
         font-size: 14px;
         span {
@@ -77,6 +84,8 @@ const RightSidebarStyles = styled.div`
   }
     .wrapper {
         margin: 0 auto;
+        width: 93%;
+
         @media (max-width:1080px) {
             width: 95%;
         }
@@ -100,7 +109,7 @@ const RightSidebarStyles = styled.div`
     background-color: var(--grey-2);
     padding:1.4rem 2rem;
 
-    border-radius: 10px;
+    border-radius: 15px;
   
     &.wrapper2 {
         padding:1.8rem 0;
