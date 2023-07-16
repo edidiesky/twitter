@@ -17,15 +17,15 @@ const RightSidebarIndex: React.FC<RightSidebarProps> = () => {
                             <h4 className="fs-16 text-extra-bold">Subscribe to unlock new features.</h4>
                             <div className="btn text-extra-bold btn-3 fs-16 text-white">Get Verfied</div>
                         </div>
-                        <div className="verfiy_wrapper wrapper2 w-90 auto flex column item-start gap-3">
-                            <h3 className="text-extra-bold">Who to follow</h3>
-                            <div className="flex column" style={{ gap: "1.5rem" }}>
+                        <div className="verfiy_wrapper wrapper2 w-90 auto flex column item-start gap-1">
+                            <h3 className="text-extra-bold w-90 auto">Who to follow</h3>
+                            <div className="flex column w-100">
                                 {
-                                    chatData.map(x => {
-                                        return <div className="w-100 flex item-center gap-3 justify-space">
+                                    chatData.map((x, index) => {
+                                        return <div key={index} className="w-100 list flex item-center justify-space">
                                             <div className="flex item-center gap-1">
                                                 <img src={x.image} alt="" className="avatar" />
-                                                <h4 className="fs-16 text-extra-bold">
+                                                <h4 className="fs-16 text-extra-bold flex column" style={{ gap: ".2rem" }}>
                                                     {x.name}
                                                     <span className="block fs-14 text-grey text-light">
                                                         {x.username}
@@ -38,6 +38,15 @@ const RightSidebarIndex: React.FC<RightSidebarProps> = () => {
                                     })
                                 }
                             </div>
+                        </div>
+                        <div className="flex item-center w-90 auto fs-12 text-light flex-wrap" style={{ gap: ".6rem" }}>
+                            <h4 className='text-light'>Terms of Service</h4>
+                            <h4 className='text-light'>Privacy Policy</h4>
+                            <h4 className='text-light'>Cookie Policy</h4>
+                            <h4 className='text-light'>Ads info</h4>
+                            <h4 className='text-light'>More</h4>
+                            <h4 className='text-light'>Edidiong Essien</h4>
+                            <h4 className='text-light'>© 2023</h4>
                         </div>
                     </div>
 
@@ -54,8 +63,23 @@ const RightSidebarStyles = styled.div`
     position: sticky;
     top: 10%;
     border-left: 1px solid rgba(0,0,0,.1);
+    @media (max-width:980px) {
+        display: none;
+  }
+  h4 {
+    @media (max-width:1080px) {
+        font-size: 14px;
+        span {
+        font-size: 12px;
+
+        }
+    }
+  }
     .wrapper {
         margin: 0 auto;
+        @media (max-width:1080px) {
+            width: 95%;
+        }
     }
     h3 {
         font-size: 22px;
@@ -63,12 +87,26 @@ const RightSidebarStyles = styled.div`
     .btn-3 {
         padding: 1rem 2rem;
     }
+    .list {
+        padding:.8rem 2rem;
+        justify-content: space-between;
+        gap: 1rem;
+
+        &:hover {
+            background-color:#e5ecef;
+        }
+    }
     .verfiy_wrapper {
-        padding:1.4rem 2rem;
     background-color: var(--grey-2);
+    padding:1.4rem 2rem;
+
     border-radius: 10px;
+  
     &.wrapper2 {
-        padding:1.8rem 1.7rem;
+        padding:1.8rem 0;
+        h3 {
+        padding:1rem;
+    }
 
     }
     }

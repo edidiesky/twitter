@@ -27,6 +27,15 @@ const HomeStyles = styled.div`
     grid-template-columns: 25vw 1fr 30vw;
     grid-gap: 1rem;
     min-height: 100vh;
+    @media (max-width:1080px) {
+        grid-template-columns: 150px 1fr .6fr;
+  }
+  @media (max-width:980px) {
+    grid-template-columns: 100px 1fr;
+  }
+  @media (max-width:780px) {
+        grid-template-columns: 100px 1fr;
+  }
   `
 
 export default HomeIndex

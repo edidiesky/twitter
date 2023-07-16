@@ -84,6 +84,9 @@ h1 {
 h2 {
   font-size: 45px;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 
 .btn {
   border: none;
