@@ -7,7 +7,6 @@ interface RightSidebarProps {
 }
 const RightSidebarIndex: React.FC<RightSidebarProps> = () => {
     return (
-        <div className="w-100 h-100">
             <RightSidebarStyles>
                 <div className="wrapper flex column gap-2">
                     <Search />
@@ -52,8 +51,6 @@ const RightSidebarIndex: React.FC<RightSidebarProps> = () => {
 
                 </div>
             </RightSidebarStyles>
-
-        </div>
     )
 }
 
@@ -61,7 +58,7 @@ const RightSidebarStyles = styled.div`
     width: 100%;
     height: 100vh;
     position: sticky;
-    top: 10%;
+    top: 0%;
     @media (max-width:980px) {
         display: none;
   }

@@ -49,35 +49,32 @@ const list = [
 const LeftSidebarIndex: React.FC = () => {
     const username = 'Edidie tried Coding'
     return (
-        <div className="w-100 h-100">
-            <LeftSidebarStyles>
-                <div className="flex column wrapper auto gap-1">
-                    <div className="flex top w-100">
-                        <div className="icon flex item-center justify-center">
-                            <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
-                        </div>
-                    </div>
-                    <ul className="flex column item-start">
-                        {
-                            list.map((x, index) => {
-                                return <li key={index} className="list flex item-center gap-2 text-light">
-                                    {x.icon}
-                                    <span className='span'>{x.title}</span></li>
-                            })
-                        }
-                    </ul>
-                    <div className="btn fs-18 text-white text-bold">Tweet</div>
-                    <div className="profilewrapper w-100 flex item-center">
-                        <img src="./images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
-                        <h4 className="fs-16 text-bold text-start w-100">
-                            {username}
-                            <span className="block text-grey text-light fs-16">@edidiesky</span>
-                        </h4>
+        <LeftSidebarStyles>
+            <div className="flex column wrapper auto gap-1">
+                <div className="flex top w-100">
+                    <div className="icon flex item-center justify-center">
+                        <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
                     </div>
                 </div>
-            </LeftSidebarStyles>
-
-        </div>
+                <ul className="flex column item-start">
+                    {
+                        list.map((x, index) => {
+                            return <li key={index} className="list flex item-center gap-2 text-light">
+                                {x.icon}
+                                <span className='span'>{x.title}</span></li>
+                        })
+                    }
+                </ul>
+                <div className="btn fs-18 text-white text-bold">Tweet</div>
+                <div className="profilewrapper w-100 flex item-center">
+                    <img src="./images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
+                    <h4 className="fs-16 text-bold text-start w-100">
+                        {username}
+                        <span className="block text-grey text-light fs-16">@edidiesky</span>
+                    </h4>
+                </div>
+            </div>
+        </LeftSidebarStyles>
     )
 }
 
@@ -86,7 +83,7 @@ const LeftSidebarStyles = styled.div`
     /* background-color: red; */
     height: 100vh;
     position: sticky;
-    top: 10%;
+    top: 0%;
     @media (max-width:490px) {
         display: none;
   }
