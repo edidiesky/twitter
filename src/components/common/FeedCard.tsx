@@ -77,6 +77,9 @@ const FeedCardStyles = styled.div`
     .feedtags_wrapper {
         /* justify-content:center; */
         gap:3rem;
+        @media (max-width:580px) {
+            gap:1rem;
+        }
     }
     .iconwrapper {
         transition: all .5s;
