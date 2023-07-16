@@ -5,9 +5,7 @@ import Feed from './feed/feed';
 import LeftSidebarIndex from '../common/LeftSidebar';
 import RightSidebarIndex from '../common/RightBar';
 
-interface HomeProps {
-}
-const HomeIndex: React.FC<HomeProps> = () => {
+const HomeIndex: React.FC = () => {
     return (
         <div className="w-100">
             <HomeStyles>
