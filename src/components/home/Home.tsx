@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Top from './top/top';
 import Feed from './feed/feed';
 import LeftSidebarIndex from '../common/LeftSidebar';
-import RightSidebarIndex from '../common/RightBar';
+import RightSidebarIndex from '../common/right/RightBar';
 
 const HomeIndex: React.FC = () => {
     return (
@@ -24,7 +24,7 @@ const HomeIndex: React.FC = () => {
 const HomeStyles = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: 25vw 1fr 25vw;
+    grid-template-columns: 25vw 1fr 30vw;
     grid-gap: 1rem;
     min-height: 100vh;
   `

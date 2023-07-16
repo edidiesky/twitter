@@ -18,6 +18,7 @@
   --primary: #e4c590;
   --background_2: #0e0d0c;
   --blue-1: rgb(29, 155, 240);
+  --grey-2: #eff3f4;
 }
 
 body {
@@ -99,8 +100,15 @@ h2 {
 .btn.btn-2 {
   opacity: 0.8;
 }
+.btn.btn-3 {
+  background-color: #000;
+  padding: 1.2rem 2.4rem;
+  opacity: 1;
+}
 .btn.btn-2:hover {
   opacity: 1;
+}.btn.btn-3:hover {
+  opacity: .7;
 }
 .btn:hover {
   opacity: 1;
@@ -508,29 +516,6 @@ button {
 
 .wrap {
   flex-wrap: wrap;
-}
-
-.input {
-  height: 55px;
-  background: #f7f7f7f7;
-  padding: 0 2.4rem;
-  width: 100%;
-  outline: none;
-  border: 1px solid #f7f7f7f7;
-  font-size: 1.5rem;
-  font-weight: 400;
-  transition: all 0.2s;
-  font-family: inherit;
-  color: var(--dark-1);
-}
-
-.input:hover {
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
-}
-
-.input:focus {
-  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 /* slider css start */
