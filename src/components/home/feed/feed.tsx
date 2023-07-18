@@ -10,8 +10,8 @@ const Feed: React.FC = () => {
             <FeedStyles>
                 <div className="flex w-100 column">
                     {
-                        feedData.map((feed:feedcardtype )=> {
-                            return <FeedCard {...feed} />
+                        feedData.map((feed:feedcardtype) => {
+                            return <FeedCard {...feed} key={feed.tweet_id} />
                         })
                     }
                 </div>

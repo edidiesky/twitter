@@ -28,5 +28,8 @@
     "styled-components": "^6.0.4",
     "typescript": "5.1.6",
     "world-countries": "^4.0.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

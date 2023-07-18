@@ -4,7 +4,7 @@ export type feedcardtype = {
     user_id: number;
     username: string;
     tweet_text: string;
-    hashtags: string;
+    // hashtags: string;
     timestamp: string;
     retweet_count: number;
     favorite_count: number;

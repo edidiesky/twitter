@@ -7,22 +7,22 @@ import styled from 'styled-components';
 
 const FeedCard = (props: feedcardtype) => {
     return (
-        <FeedCardStyles>
+        <FeedCardStyles key={props.tweet_id}>
             <div className="flex w-90 auto item-start feed_card_wrapper gap-1">
                 <img src={props.image} alt="" className="avatar" />
-                <div className="flex column w-100" style={{ gap: '.4rem' }}>
-                    <h4 className="fs-18 text-extra-bold flex item-center" style={{ gap: '.3rem' }}>
+                <div className="flex column w-100" style={{ gap: '.3rem' }}>
+                    <h4 className="fs-18 text-extra-bold flex item-center" style={{ gap: '.2rem' }}>
                         {props.profile_name}
                         <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
                         <span className="text-light fs-16 text-grey ">@{props.username}</span>
                     </h4>
-                    <h5 style={{ paddingBottom: "1rem" }} className="text-light family1 fs-18">
+                    <h5 style={{ paddingBottom: "1rem" }} className="text-light family1 fs-14">
                         {props.tweet_text}
                     </h5>
-                    <div className="w-100">
+                    <div className="w-100 wrapper">
                         {
-                            props.tweet_image.map(x => {
-                                return <img style={{ borderRadius: "20px" }} src={x} alt="" className="w-100 h-100" />
+                            props.tweet_image.map((x ,index)=> {
+                                return <img key={index} style={{ borderRadius: "10px" }} src={x} alt="" className="w-100 h-100" />
                             })
                         }
                     </div>
@@ -81,6 +81,11 @@ const FeedCardStyles = styled.div`
             gap:1rem;
         }
     }
+    .wrapper {
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        display: grid;
+        grid-gap: .5rem;
+    }
     .iconwrapper {
         transition: all .5s;
         cursor: pointer;
@@ -115,7 +120,7 @@ const FeedCardStyles = styled.div`
     }
 }
     h5 {
-        font-size: 17px;
+        font-size: 16px;
         color: rgb(15, 20, 25);
         font-weight: 300;
         line-height: 20px;

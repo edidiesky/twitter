@@ -4,7 +4,7 @@ export const feedData = [
     user_id: 15,
     profile_name: "The champion",
     username: "mhasnneye",
-    tweet_text:'Happy birthday wizkid ',  hashtags: "#cute",
+    tweet_text: 'Happy birthday wizkid ',
     timestamp: "07/25/2022",
     retweet_count: 292,
     favorite_count: 299,
@@ -19,7 +19,6 @@ export const feedData = [
     profile_name: "The champion",
     username: "tdarke0",
     tweet_text: 'The National Drug Law Enforcement Agency has arrested a teenage student, Benjamin Nnamani Daberechi, 19, with Methamphetamine drugs concealed inside crayfish.',
-    hashtags: "#tbt",
     timestamp: "12/22/2022",
     retweet_count: 246,
     favorite_count: 749,
@@ -38,9 +37,7 @@ export const feedData = [
     retweet_count: 112,
     favorite_count: 541,
     is_verified: true,
-    tweet_image: ['https://pbs.twimg.com/media/F1Leld2WYAAu0TV?format=jpg&name=small'],
-
-    // tweet_image: ['https://pbs.twimg.com/media/F05WbLRX0AAO1wL?format=jpg&name=small', 'https://pbs.twimg.com/media/F1Kf1SBX0AAapam?format=jpg&name=900x900', 'https://pbs.twimg.com/media/F1Kf1SBX0AAapam?format=jpg&name=900x900', 'https://pbs.twimg.com/media/F1Kf1SBX0AAapam?format=jpg&name=900x900'],
+    tweet_image: ['https://pbs.twimg.com/media/F1Leld2WYAAu0TV?format=jpg&name=small','https://pbs.twimg.com/media/F1OyTqQX0AEqA5J?format=jpg&name=360x360'],
     image: "./images/boris-khentov.jpg",
     location: "Lille",
   },
@@ -50,12 +47,11 @@ export const feedData = [
     profile_name: "The champion",
     username: "dgors2",
     tweet_text: "Duis ac nibh.",
-    hashtags: "#fashion",
     timestamp: "07/16/2022",
     retweet_count: 697,
     favorite_count: 390,
     is_verified: false,
-    tweet_image: ['https://pbs.twimg.com/media/F05WbLRX0AAO1wL?format=jpg&name=small'],
+    tweet_image: ['https://pbs.twimg.com/media/F1RniYRXwAABUYb?format=jpg&name=small'],
     image: "./images/boris-khentov.jpg",
     location: "Duanjia",
   },
@@ -66,7 +62,6 @@ export const feedData = [
     username: "tcattermull3",
     tweet_text:
       "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.",
-    hashtags: "#beautiful",
     timestamp: "05/05/2022",
     retweet_count: 934,
     favorite_count: 746,
@@ -82,7 +77,7 @@ export const feedData = [
     username: "aalvarado4",
     tweet_text:
       "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum.",
-    hashtags: "#cute",
+  
     timestamp: "03/22/2022",
     retweet_count: 464,
     favorite_count: 562,
@@ -97,7 +92,6 @@ export const feedData = [
     profile_name: "The champion",
     username: "amadgewick5",
     tweet_text: 'The National Drug Law Enforcement Agency has arrested a teenage student, Benjamin Nnamani Daberechi, 19, with Methamphetamine drugs concealed inside crayfish.',
-    hashtags: "#cute",
     timestamp: "10/24/2022",
     retweet_count: 818,
     favorite_count: 56,
@@ -113,7 +107,6 @@ export const feedData = [
     username: "mlyptratt6",
     tweet_text:
       "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.",
-    hashtags: "#cute",
     timestamp: "03/22/2022",
     retweet_count: 344,
     favorite_count: 442,
@@ -129,7 +122,7 @@ export const feedData = [
     username: "gsterte7",
     tweet_text:
       "Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-    hashtags: "#love",
+
     timestamp: "04/27/2022",
     retweet_count: 80,
     favorite_count: 965,
@@ -146,7 +139,6 @@ export const feedData = [
     username: "kcreesb",
     tweet_text:
       "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis.",
-    hashtags: "#love",
     timestamp: "06/07/2022",
     retweet_count: 475,
     favorite_count: 439,
@@ -162,7 +154,7 @@ export const feedData = [
     username: "dstilldalec",
     tweet_text:
       "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante.",
-    hashtags: "#fashion",
+  
     timestamp: "01/19/2022",
     retweet_count: 4,
     favorite_count: 575,
@@ -177,7 +169,6 @@ export const feedData = [
     profile_name: "The champion",
     username: "mlowndesbroughd",
     tweet_text: "In congue.",
-    hashtags: "#beautiful",
     timestamp: "01/16/2022",
     retweet_count: 309,
     favorite_count: 240,

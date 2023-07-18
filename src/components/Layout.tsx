@@ -5,12 +5,9 @@ interface LayoutProps {
 }
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="w-100">
-      <LayoutStyles>
+      <LayoutStyles style={{ overflow: "hidden" }}>
         {children}
       </LayoutStyles>
-
-    </div>
   )
 }
 

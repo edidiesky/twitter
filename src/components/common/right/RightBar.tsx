@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import Search from './Search';
 import { chatData } from '@/data/chatData';
 
-interface RightSidebarProps {
-}
-const RightSidebarIndex: React.FC<RightSidebarProps> = () => {
+const RightSidebarIndex = () => {
     return (
             <RightSidebarStyles>
                 <div className="wrapper flex column gap-2">
