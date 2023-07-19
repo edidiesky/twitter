@@ -29,13 +29,29 @@ const list = [
         icon: <GoSearch />
 
     }, 
+    {
+        title: "Notifications",
+        path: '',
+        icon: <IoNotificationsOutline />
+
+    }, {
+        title: "Messages",
+        path: '',
+        icon: <GoSearch />
+
+    }, {
+        title: "Profile",
+        path: '',
+        icon: <GoSearch />
+
+    }, 
 ]
 
 const LeftSidebarIndex = () => {
     const username = 'Edidie tried Coding'
     return (
         <LeftSidebarStyles>
-            {/* <div className="flex column wrapper auto gap-1">
+            <div className="flex column wrapper auto gap-1">
                 <div className="flex top w-100">
                     <div className="icon flex item-center justify-center">
                         <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
@@ -58,7 +74,7 @@ const LeftSidebarIndex = () => {
                         <span className="block text-grey text-light fs-16">@edidiesky</span>
                     </h4>
                 </div>
-            </div> */}
+            </div>
         </LeftSidebarStyles>
     )
 }

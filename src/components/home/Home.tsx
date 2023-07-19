@@ -26,7 +26,7 @@ const HomeStyles = styled.div`
     display: grid;
     grid-template-columns: 22vw 1fr 30vw;
     grid-gap: 1rem;
-    min-height: 100vh;
+    place-items: start;
     
     .wrap {
         border-right : 1px solid rgba(0,0,0,.1);
