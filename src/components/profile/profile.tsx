@@ -4,17 +4,27 @@ import WallpaperIndex from './top/wallpaper';
 import ProfileBottomIndex from './top/bottom';
 import RightSidebarIndex from '../common/right/RightBar';
 import LeftSidebarIndex from '../common/LeftSidebar';
+import Top from './top/top';
+import Feed from '../common/feed/feed';
+
+type Rightbar = {
+    type: String
+}
 
 const Profile: React.FC = () => {
     return (
         <ProfileStyles>
             {/* top bar of user profile */}
-            <LeftSidebarIndex/>
-            <div className="flex wrap column gap-1">
-                <WallpaperIndex />
-                <ProfileBottomIndex />
+            <LeftSidebarIndex />
+            <div className="flex wrap column gap-2">
+                <div className="flex column">
+                    <Top />
+                    <WallpaperIndex />
+                    <ProfileBottomIndex />
+                </div>
+                <Feed />
             </div>
-            <RightSidebarIndex/>
+            <RightSidebarIndex types={'profile'} />
             {/* User feeds */}
         </ProfileStyles>
     )
@@ -27,7 +37,8 @@ const ProfileStyles = styled.div`
     display: grid;
     grid-template-columns: 22vw 1fr 30vw;
     grid-gap: 1rem;
-    min-height: 100vh;
+    /* height: 100vh; */
+    /* overflow: hidden; */
     @media (max-width:1180px) {
         grid-template-columns: 120px 1fr .7fr;
   }

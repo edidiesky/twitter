@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Top from './top/top';
-import Feed from './feed/feed';
 import LeftSidebarIndex from '../common/LeftSidebar';
 import RightSidebarIndex from '../common/right/RightBar';
+import Feed from '../common/feed/feed';
 
 const HomeIndex: React.FC = () => {
     return (

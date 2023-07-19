@@ -23,6 +23,7 @@ const Feed: React.FC = () => {
 
 const FeedStyles = styled.div`
     width: 100%;
+
   `
 
 export default Feed
