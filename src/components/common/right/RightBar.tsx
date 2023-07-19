@@ -5,50 +5,51 @@ import { chatData } from '@/data/chatData';
 
 const RightSidebarIndex = () => {
     return (
-            <RightSidebarStyles>
-                <div className="wrapper flex column gap-2">
-                    <Search />
-                    <div className="w-90 auto flex column gap-2">
-                        <div className="verfiy_wrapper w-90 auto flex column item-start gap-1">
-                            <h3 className="text-extra-bold">Get Verified</h3>
-                            <h4 className="fs-16 text-extra-bold">Subscribe to unlock new features.</h4>
-                            <div className="btn text-extra-bold btn-3 fs-16 text-white">Get Verfied</div>
-                        </div>
-                        <div className="verfiy_wrapper wrapper2 w-90 auto flex column item-start">
-                            <h3 className="text-extra-bold w-90 auto">Who to follow</h3>
-                            <div className="flex column w-100">
-                                {
-                                    chatData.map((x, index) => {
-                                        return <div key={index} className="w-100 list flex item-center justify-space">
-                                            <div className="flex item-center gap-1">
-                                                <img src={x.image} alt="" className="avatar" />
-                                                <h4 className="fs-16 text-extra-bold flex column" style={{ gap: ".2rem" }}>
-                                                    {x.name}
-                                                    <span className="block fs-14 text-grey text-light">
-                                                        {x.username}
-                                                    </span>
-                                                </h4>
-                                            </div>
-                                            <div className="btn text-extra-bold btn-3 fs-14 text-white">Follow</div>
-
+        <RightSidebarStyles>
+            <div className="wrapper flex column gap-2">
+                <Search />
+                <div className="w-90 auto flex column gap-2">
+                    <div className="verfiy_wrapper w-90 auto flex column item-start gap-1">
+                        <h3 className="text-extra-bold">Get Verified</h3>
+                        <h4 className="fs-16 text-extra-bold">Subscribe to unlock new features.</h4>
+                        <div className="btn text-extra-bold btn-3 fs-16 text-white">Get Verfied</div>
+                    </div>
+                    <div className="verfiy_wrapper wrapper2 w-90 auto flex column item-start">
+                        <h3 className="text-extra-bold w-90 auto">
+                            You might like</h3>
+                        <div className="flex column w-100">
+                            {
+                                chatData.map((x, index) => {
+                                    return <div key={index} className="w-100 list flex item-center justify-space">
+                                        <div className="flex item-center gap-1">
+                                            <img src={x.image} alt="" className="avatar" />
+                                            <h4 className="fs-16 text-extra-bold flex column" style={{ gap: ".2rem" }}>
+                                                {x.name}
+                                                <span className="block fs-14 text-grey text-light">
+                                                    {x.username}
+                                                </span>
+                                            </h4>
                                         </div>
-                                    })
-                                }
-                            </div>
-                        </div>
-                        <div className="flex item-center w-90 auto fs-16 text-light flex-wrap" style={{ gap: ".6rem" }}>
-                            <h5 className='text-light'>Terms of Service</h5>
-                            <h5 className='text-light'>Privacy Policy</h5>
-                            <h5 className='text-light'>Cookie Policy</h5>
-                            <h5 className='text-light'>Ads info</h5>
-                            <h5 className='text-light'>More</h5>
-                            <h5 className='text-light'>Edidiong Essien</h5>
-                            <h5 className='text-light'>© 2023</h5>
+                                        <div className="btn text-extra-bold btn-3 fs-14 text-white">Follow</div>
+
+                                    </div>
+                                })
+                            }
                         </div>
                     </div>
-
+                    <div className="flex item-center w-90 auto fs-16 text-light flex-wrap" style={{ gap: ".6rem" }}>
+                        <h5 className='text-light'>Terms of Service</h5>
+                        <h5 className='text-light'>Privacy Policy</h5>
+                        <h5 className='text-light'>Cookie Policy</h5>
+                        <h5 className='text-light'>Ads info</h5>
+                        <h5 className='text-light'>More</h5>
+                        <h5 className='text-light'>Edidiong Essien</h5>
+                        <h5 className='text-light'>© 2023</h5>
+                    </div>
                 </div>
-            </RightSidebarStyles>
+
+            </div>
+        </RightSidebarStyles>
     )
 }
 

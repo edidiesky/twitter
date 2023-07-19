@@ -39,11 +39,6 @@ const list = [
         path: '',
         icon: <GoSearch />
 
-    }, {
-        title: "Profile",
-        path: '',
-        icon: <GoSearch />
-
     }, 
 ]
 
