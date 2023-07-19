@@ -5,6 +5,7 @@ import { AiOutlineArrowLeft } from 'react-icons/ai'
 const Top: React.FC = () => {
     return (
         <TopStyles className="w-100">
+       
             <div className='flex item-center gap-2 w-90 auto'>
                 {/* <h2 className="fs-30">Top bar</h2> */}
                 <div className="icons flex item-center justify-center"><AiOutlineArrowLeft color='var(--dark-1)' fontSize={'20px'} /></div>

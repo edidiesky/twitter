@@ -28,18 +28,7 @@ const list = [
         path: '',
         icon: <GoSearch />
 
-    }, 
-    {
-        title: "Notifications",
-        path: '',
-        icon: <IoNotificationsOutline />
-
-    }, {
-        title: "Messages",
-        path: '',
-        icon: <GoSearch />
-
-    }, 
+    },
 ]
 
 const LeftSidebarIndex = () => {
@@ -76,8 +65,7 @@ const LeftSidebarIndex = () => {
 
 const LeftSidebarStyles = styled.div`
     width: 100%;
-    /* background-color: red; */
-    height: 100vh;
+    min-height: 100vh;
     position: sticky;
     top: 0%;
     @media (max-width:480px) {

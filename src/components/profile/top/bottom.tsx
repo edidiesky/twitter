@@ -9,14 +9,14 @@ const ProfileBottomIndex: React.FC = () => {
       <div className="w-90 auto flex item-center justify-space">
         <div className="flex item-center justify-end w-100"> <div className="profileBtn text-dark text-bold">Edit Profile</div></div>
       </div>
-      <div className="w-90 flex column gap-2 auto">
+      <div className="w-90 flex column  gap-2 auto">
         {/* username and  */}
         <h3 className="fs-20 text-extra-bold">Eddie tried coding
           <div className="block fs-18 text-grey text-light">@edidiesky</div>
         </h3>
         <h4 className="fs-16 text-light">Typescript || React.js || Node.js || Nextjs developer - A curious developer | You can visit my portfolio website to see how curious a developer I am</h4>
         {/* ocupation date location */}
-        <div className="flex fs-16 text-light item-center w-100 gap-1">
+        <div className="flex flex-wrap fs-16 text-light item-center w-100 gap-1">
           <div className="flex item-center" style={{ gap: ".5rem" }}>
             <PiSuitcaseSimple fontSize={'20px'} />
             Science & Technology
@@ -30,7 +30,7 @@ const ProfileBottomIndex: React.FC = () => {
           </div>
         </div>
         {/* followers followings */}
-        <div className="flex fs-16 text-light item-center w-100 gap-3">
+        <div className="flex flex-wrap fs-16 text-light item-center w-100 gap-3">
           <div className="text-bold flex item-center" style={{ gap: ".5rem" }}>
             24 <div className="text-light">Following</div>
           </div> <div className="text-bold flex item-center" style={{ gap: ".5rem" }}>
