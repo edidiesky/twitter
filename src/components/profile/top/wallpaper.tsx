@@ -18,8 +18,8 @@ const WallpaperStyles = styled.div`
     background-color: #CFD9DE;
     position: relative;
     .image_wrapper {
-      width:12rem;
-      height:12rem;
+      width:15rem;
+      height:15rem;
       border-radius:50%;
       position: absolute;
       bottom:-30%;
