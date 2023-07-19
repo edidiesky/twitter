@@ -22,7 +22,14 @@ const Profile: React.FC = () => {
                     <WallpaperIndex />
                     <ProfileBottomIndex />
                 </div>
-                <Feed />
+                <div className="w-100 flex column">
+                    <div className="w-100 flex item-center text-bold fs-16 profilelist">
+                        <div className="flex-1 active profileTag"><div className="tag">Tweets</div></div>
+                        <div className="flex-1 profileTag">Tweets</div>
+                        <div className="flex-1 profileTag">Tweets</div>
+                    </div>
+                    <Feed />
+                </div>
             </div>
             <RightSidebarIndex types={'profile'} />
             {/* User feeds */}
@@ -37,6 +44,32 @@ const ProfileStyles = styled.div`
     display: grid;
     grid-template-columns: 22vw 1fr 30vw;
     grid-gap: 1rem;
+    place-itens:start;
+    .profilelist {
+        border-bottom:1px solid rgba(0,0,0,.1);
+        .profileTag {
+            padding:2rem;
+            text-align:center;
+           .tag {
+            position:relative;
+            width:100px;
+            text-align:center;
+
+            &.active::after {
+                position:absolute;
+                width:100%;
+                height:3px;
+                background-color: var(--blue-1);
+                content:"";
+                bottom:-2%;
+                left:0%;
+            }
+           }
+            &:hover {
+                background:var(--grey-2);
+            }
+        }
+    }
     /* height: 100vh; */
     /* overflow: hidden; */
     @media (max-width:1180px) {

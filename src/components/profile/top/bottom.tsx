@@ -10,6 +10,7 @@ const ProfileBottomIndex: React.FC = () => {
         <div className="flex item-center justify-end w-100"> <div className="profileBtn text-dark text-bold">Edit Profile</div></div>
       </div>
       <div className="w-90 flex column gap-2 auto">
+        {/* username and  */}
         <h3 className="fs-20 text-extra-bold">Eddie tried coding
           <div className="block fs-18 text-grey text-light">@edidiesky</div>
         </h3>
@@ -28,6 +29,7 @@ const ProfileBottomIndex: React.FC = () => {
             Joined January 2022
           </div>
         </div>
+        {/* followers followings */}
         <div className="flex fs-16 text-light item-center w-100 gap-3">
           <div className="text-bold flex item-center" style={{ gap: ".5rem" }}>
             24 <div className="text-light">Following</div>
