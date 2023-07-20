@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { IoCalendarOutline, IoLocationOutline } from 'react-icons/io5'
 import { PiSuitcaseSimple } from 'react-icons/pi'
+type SetStateProp<T> = React.Dispatch<React.SetStateAction<T>>
+type modalType = {
+  setModal?: SetStateProp<Boolean>;
+}
 
-const ProfileBottomIndex: React.FC = () => {
+const ProfileBottomIndex: React.FC<modalType> = ({ setModal }) => {
   return (
     <ProfileBottomStyles className='flex column gap-1'>
       <div className="w-90 auto flex item-center justify-space">
-        <div className="flex item-center justify-end w-100"> <div className="profileBtn text-dark text-bold">Edit Profile</div></div>
+        <div className="flex item-center justify-end w-100"> <div className="profileBtn text-dark text-bold" onClick={() => setModal(true)}>Edit Profile</div></div>
       </div>
       <div className="w-90 flex column  gap-2 auto">
         {/* username and  */}

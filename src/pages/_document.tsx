@@ -1,5 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Segoe UI, sans-serif',
+  },
+});
+
 import { DocumentContext, DocumentInitialProps } from 'next/dist/shared/lib/utils';
 
 export default class MyDocument extends Document {
@@ -31,11 +38,13 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="en">
+        <ThemeProvider theme={theme}>
         <Head />
         <body>
           <Main />
           <NextScript />
         </body>
+        </ThemeProvider>
       </Html>
     );
   }

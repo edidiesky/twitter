@@ -7,22 +7,33 @@ import LeftSidebarIndex from '../common/LeftSidebar';
 import Top from './top/top';
 import Feed from '../common/feed/feed';
 import AuthModal from '../modals/AuthModal';
+import { AnimatePresence } from 'framer-motion';
 
 type Rightbar = {
     type: String
 }
 
 const Profile: React.FC = () => {
+    const [modal, setModal] = React.useState(false)
     return (
         <ProfileStyles>
             {/* top bar of user profile */}
             <LeftSidebarIndex />
-            <AuthModal/>
+            {/* control the update modal */}
+            <AnimatePresence
+                initial="false"
+                exitBeforeEnter={true}
+                onExitComplete={() => null}
+            >
+                {
+                    modal && <AuthModal modal={modal} setModal={setModal} />
+                }
+            </AnimatePresence>
             <div className="flex w-100 wrap column gap-2">
                 <div className="flex column">
                     <Top />
                     <WallpaperIndex />
-                    <ProfileBottomIndex />
+                    <ProfileBottomIndex setModal={setModal} />
                 </div>
                 <div className="w-100 flex column">
                     <div className="w-100 flex item-center text-bold fs-16 profilelist">

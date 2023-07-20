@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineArrowLeft } from 'react-icons/ai'
-
-const Top: React.FC = () => {
+type SetStateProp<T> = React.Dispatch<React.SetStateAction<T>>
+type modalType = {
+    setModal?: SetStateProp<Boolean>;
+  }
+  
+const Top: React.FC<modalType> = ({setModal}) => {
     return (
         <TopStyles className="w-100">
        
