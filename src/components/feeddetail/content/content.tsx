@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Top from '../feedtop/top';
 import PostDetailsComments from './comments';
+import TweetFormSection from '@/components/common/tweetsection';
+import PostFeedCard from '../card';
 
 
 
@@ -9,6 +11,8 @@ const PostDetailsContent: React.FC = () => {
     return (
         <PostDetailsContentStyles>
             <Top/>
+            <PostFeedCard/>
+            <TweetFormSection/>
             <PostDetailsComments/>
         </PostDetailsContentStyles>
     )

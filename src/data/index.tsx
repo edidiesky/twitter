@@ -37,7 +37,7 @@ export const feedData = [
     retweet_count: 112,
     favorite_count: 541,
     is_verified: true,
-    tweet_image: ['https://pbs.twimg.com/media/F1Leld2WYAAu0TV?format=jpg&name=small','https://pbs.twimg.com/media/F1OyTqQX0AEqA5J?format=jpg&name=360x360'],
+    tweet_image: ['https://pbs.twimg.com/media/F1Leld2WYAAu0TV?format=jpg&name=small', 'https://pbs.twimg.com/media/F1OyTqQX0AEqA5J?format=jpg&name=360x360'],
     image: "./images/boris-khentov.jpg",
     location: "Lille",
   },
@@ -77,7 +77,7 @@ export const feedData = [
     username: "aalvarado4",
     tweet_text:
       "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum.",
-  
+
     timestamp: "03/22/2022",
     retweet_count: 464,
     favorite_count: 562,
@@ -154,7 +154,7 @@ export const feedData = [
     username: "dstilldalec",
     tweet_text:
       "Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante.",
-  
+
     timestamp: "01/19/2022",
     retweet_count: 4,
     favorite_count: 575,

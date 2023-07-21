@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Top from '../top/top';
 import Feed from '@/components/common/feed/feed';
+import TweetFormSection from '@/components/common/tweetsection';
 
 const Content: React.FC = () => {
     return (
         <ContentStyles>
             <Top />
+            <TweetFormSection/>
             <Feed />
         </ContentStyles>
     )
