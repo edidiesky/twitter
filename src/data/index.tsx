@@ -9,7 +9,7 @@ export const feedData = [
     retweet_count: 292,
     favorite_count: 299,
     is_verified: false,
-    tweet_image: ['https://pbs.twimg.com/media/F1JXtgeX0AIZfX1?format=jpg&name=900x900'],
+    tweet_image: ['https://pbs.twimg.com/media/F1kSXZwXgAEm9lu?format=jpg&name=small'],
     image: "./images/boris-khentov.jpg",
     location: "Agodim",
   },

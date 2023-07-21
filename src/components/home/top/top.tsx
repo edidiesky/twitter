@@ -35,7 +35,9 @@ const TopStyles = styled.div`
   .tab {
     padding: 1.5rem 2rem;
     &.tab-1 {
-        background-color: var(--grey-2);
+        &:hover {
+            background-color: #e9e9e9;
+        }
         .spans {
             width: max-content;
             margin: 0 auto;
