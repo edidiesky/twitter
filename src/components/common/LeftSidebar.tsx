@@ -2,6 +2,8 @@ import { BsTwitter } from 'react-icons/bs'
 import { RiHome7Fill } from 'react-icons/ri'
 import { GoSearch } from 'react-icons/go'
 import { IoNotificationsOutline } from 'react-icons/io5'
+
+
 import React from 'react';
 import styled from 'styled-components';
 const list = [
@@ -54,7 +56,7 @@ const LeftSidebarIndex = () => {
                     <div className="btn fs-18 text-white text-bold">Tweet</div>
                 </div>
                 <div className="profilewrapper w-100 flex item-center">
-                    <img src="./images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
+                    <img src="/images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
                     <h4 className="fs-16 text-bold text-start w-100">
                         {username}
                         <span className="block text-grey text-light fs-16">@edidiesky</span>

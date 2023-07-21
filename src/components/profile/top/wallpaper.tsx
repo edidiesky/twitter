@@ -31,8 +31,7 @@ const WallpaperStyles = styled.div`
           opacity:1;
         }
       }
-    }
-    .image_gradient {
+      .image_gradient {
       width:100%;
       height:100%;
       border-radius:50%;
@@ -50,6 +49,8 @@ const WallpaperStyles = styled.div`
       position: absolute;
       
     }
+    }
+
   `
 
 export default WallpaperIndex
