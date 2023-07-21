@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const Feed: React.FC = () => {
     return (
-        <div className="w-100">
+        <div className="w-100 h-100">
             <FeedStyles>
                 <div className="flex w-100 column">
                     {

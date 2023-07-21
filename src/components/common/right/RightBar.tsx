@@ -17,7 +17,7 @@ const images = [
 const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
     return (
         <RightSidebarStyles>
-            <div className="wrapper flex column">
+            <div className="wrapper w-100 flex column">
                 <Search />
                 <div className="w-90 auto flex column gap-2">
                     {
@@ -74,7 +74,10 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
 }
 
 const RightSidebarStyles = styled.div`
-    width: 100%;
+   flex:.7;
+   min-height: 100vh;
+   position: sticky;
+   top: 0;
     @media (max-width:980px) {
         display: none;
   }

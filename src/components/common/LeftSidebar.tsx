@@ -35,22 +35,24 @@ const LeftSidebarIndex = () => {
     const username = 'Edidie tried Coding'
     return (
         <LeftSidebarStyles>
-            <div className="flex column wrapper auto gap-1">
-                <div className="flex top w-100">
-                    <div className="icon flex item-center justify-center">
-                        <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
+            <div className="flex h-100 column justify-space wrapper auto gap-1">
+                <div className="flex w-100 column gap-1">
+                    <div className="flex top w-100">
+                        <div className="icon flex item-center justify-center">
+                            <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
+                        </div>
                     </div>
+                    <ul className="flex column item-start">
+                        {
+                            list.map((x, index) => {
+                                return <li key={index} className="list flex item-center gap-2 text-light">
+                                    {x.icon}
+                                    <span className='span'>{x.title}</span></li>
+                            })
+                        }
+                    </ul>
+                    <div className="btn fs-18 text-white text-bold">Tweet</div>
                 </div>
-                <ul className="flex column item-start">
-                    {
-                        list.map((x, index) => {
-                            return <li key={index} className="list flex item-center gap-2 text-light">
-                                {x.icon}
-                                <span className='span'>{x.title}</span></li>
-                        })
-                    }
-                </ul>
-                <div className="btn fs-18 text-white text-bold">Tweet</div>
                 <div className="profilewrapper w-100 flex item-center">
                     <img src="./images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
                     <h4 className="fs-16 text-bold text-start w-100">
@@ -64,10 +66,11 @@ const LeftSidebarIndex = () => {
 }
 
 const LeftSidebarStyles = styled.div`
-    width: 100%;
+    flex: 0 0 300px;
     min-height: 100vh;
-    position: sticky;
-    top: 0%;
+   position: sticky;
+   top: 0;
+    /* overflow: hidden; */
     @media (max-width:480px) {
         display: none;
   }
@@ -165,6 +168,11 @@ const LeftSidebarStyles = styled.div`
         width: 80%;
         margin: 0 auto;
         padding-top: 1rem;
+        height: 100vh;
+   position: sticky;
+   top: 0%;
+   left:0;
+    position:relative;
     }
   `
 
