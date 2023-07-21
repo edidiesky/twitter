@@ -12,8 +12,10 @@ const TweetFormSection = () => {
                     <img src={"/images/raoul-bhavnani.jpg"} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
                     <div className="image_gradient"></div>
                 </div>
-                <div className="flex flex-1 column">
-                    <textarea placeholder='Tweet your reply' className="text"></textarea>
+                <div className="flex flex-1 column gv">
+                    <div className="area w-100">
+                        <textarea placeholder='Tweet your reply' className="text"></textarea>
+                    </div>
                     <div className="flex w-100 item-center justify-space">
                         <div className="flex item-center">
                             <div className="icons flex item-center justify-center">
@@ -33,7 +35,7 @@ const TweetFormSection = () => {
 const TweetFormSectionStyles = styled.div`
     width: 100%;
     padding: 1.5rem;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid rgba(0,0,0,.08);
   font-family: "CustomFont2_light", sans-serif;
 
     &:hover {
@@ -43,9 +45,14 @@ const TweetFormSectionStyles = styled.div`
         background-color: var(--blue-1) !important;
         opacity: .6;
     }
+    .area {
+        height: 6.5rem;
+    /* border-bottom: 1px solid rgba(0,0,0,.1); */
+
+    }
     .image_wrapper {
-      width:5rem;
-      height:5rem;
+      width:4rem;
+      height:4rem;
       border-radius:50%;
       cursor:pointer;
       position: relative;
@@ -98,10 +105,10 @@ const TweetFormSectionStyles = styled.div`
         font-family: inherit;
         font-weight: 400;
         background-color: transparent;
-        padding: 1rem ;
+        padding:2rem 1rem ;
         color:var(--dark-1);
         &::placeholder {
-            font-size: 22px;
+            font-size: 20px;
   font-family: "CustomFont2_light", sans-serif;
         color:var(--dark-1);
             font-weight: 400;

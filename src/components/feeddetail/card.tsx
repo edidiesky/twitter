@@ -26,18 +26,24 @@ const PostFeedCard = () => {
     return (
         <FeedCardStyles key={postfeedDetails.tweet_id}>
             <div className="flex w-90 auto item-start justify-space feed_card_wrapper gap-1">
-                <div className="flex-1 item-start flex gap-1">
-                    <div className="image_wrapper">
-                        <img src={postfeedDetails.image} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
-                        <div className="image_gradient"></div>
-                    </div>
-                    <div className="flex column flex-1" style={{ gap: '.3rem' }}>
-                        <h4 className="fs-18 text-extra-bold flex item-center" style={{ gap: '.2rem' }}>
-                            {postfeedDetails.profile_name}
-                            <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
+                <div className="flex column gap-1">
+                    <div className="flex-1 item-start flex gap-1">
+                        <div className="image_wrapper">
+                            <img src={postfeedDetails.image} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
+                            <div className="image_gradient"></div>
+                        </div>
+                        <div className="flex column flex-1" style={{ gap: '.3rem' }}>
+                            <h4 className="fs-18 text-extra-bold flex item-center" style={{ gap: '.2rem' }}>
+                                {postfeedDetails.profile_name}
+                                <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
+
+                            </h4>
                             <span className="text-light fs-16 text-grey block">@{postfeedDetails.username}</span>
-                        </h4>
-                        <h5 style={{ paddingBottom: "1rem" }} className="text-light family1 fs-16">
+
+                        </div>
+                    </div>
+                    <div className="flex-w-100 column gap-1">
+                        <h5 style={{ paddingBottom: "1rem" }} className="text-light family1 fs-18">
                             {postfeedDetails.tweet_text}
                         </h5>
                         <div className="w-100 wrapper">
@@ -82,10 +88,10 @@ const PostFeedCard = () => {
                     </div>
                 </div>
                 <div className="flex item-center justify-end">
-                            <div className="icons flex item-center justify-center">
-                                <BiDotsHorizontalRounded fontSize={'20px'} />
-                            </div>
-                        </div>
+                    <div className="icons flex item-center justify-center">
+                        <BiDotsHorizontalRounded fontSize={'20px'} />
+                    </div>
+                </div>
             </div>
         </FeedCardStyles>
     )
