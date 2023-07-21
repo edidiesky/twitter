@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BiSolidBadgeCheck, BiBarChart, BiDotsHorizontalRounded } from 'react-icons/bi'
+import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
+import { LiaRetweetSolid } from 'react-icons/lia'
 import Search from './Search';
 import { chatData } from '@/data/chatData';
 type Rightbar = {
@@ -21,12 +24,45 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                 <Search />
                 <div className="w-90 auto flex column gap-2">
                     {
-                        types && <div className="image_wrapper w-90 auto">
+                        types === 'profile' && <div className="image_wrapper w-90 auto">
                             {
                                 images.map((x, index) => {
                                     return <img key={index} src={x} alt="" className="w-100" />
                                 })
                             }
+                        </div>
+                    }
+                    {
+                        types === 'feeddetails' &&
+                        <div className="feed_participant w-90 auto flex column gap-2">
+                            <h3 className="text-extra-bold w-100 auto">
+                                Relevant People</h3>
+                            <div className="w-100 flex item-start justify-space gap-1">
+                                <div className="image_wrapper">
+                                    <img src={'/images/raoul-bhavnani.jpg'} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
+                                    <div className="image_gradient"></div>
+                                </div>
+                                <div className="flex-1 flex column" style={{ gap: ".6rem" }}>
+                                    <div className="w-100 flex item-center justify-space">
+                                        <h4 className="fs-16 text-extra-bold flex column" style={{ gap: ".2rem" }}>
+                                            Nai_SmaeTech
+                                            <span className="block fs-16 text-grey text-light">
+                                                @name_sake103
+                                            </span>
+                                        </h4>
+                                        <div className="btn text-extra-bold btn-3 fs-14 text-white">Follow</div>
+
+                                    </div>
+                                    {/* about */}
+                                    <h4 className="fs-16 text-light text-dark">
+                                        Building http://TechPad.ink,
+                                        @contentreio
+                                        | Founder
+                                        @master_backend
+                                        | Author of http://EnterpriseVue.dev | I help you become a great Backend Engineer and make money
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
                     }
                     {/* <div className="verfiy_wrapper w-90 auto flex column item-start gap-1">
@@ -42,7 +78,11 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                                 chatData.map((x, index) => {
                                     return <div key={index} className="w-100 list flex item-center justify-space">
                                         <div className="flex item-center gap-1">
-                                            <img src={x.image} alt="" className="avatar" />
+                                            <div className="image_wrapper">
+                                                <div className="image_gradient"></div>
+                                                <img src={x.image} alt="" className="avatar" />
+                                            </div>
+
                                             <h4 className="fs-16 text-extra-bold flex column" style={{ gap: ".2rem" }}>
                                                 {x.name}
                                                 <span className="block fs-14 text-grey text-light">
@@ -81,17 +121,42 @@ const RightSidebarStyles = styled.div`
     @media (max-width:980px) {
         display: none;
   }
-  .image_wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-    border: 1px solid rgba(0,0,0,.1);
-    grid-gap: 10px;
+  .feed_participant {
+    border: 1px solid rgba(0,0,0,.08);
     border-radius: 15px;
-    img {
-        height: 120px;
-        object-fit: cover;
-    }
+    padding:1.5rem 2rem;
   }
+  .image_wrapper {
+      width:5rem;
+      height:5rem;
+      border-radius:50%;
+      cursor:pointer;
+      position: relative;
+      &:hover {
+        .image_gradient{
+          opacity:1;
+        }
+      }
+      .image_gradient {
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      /* transform: translateY(-100%); */
+      position: absolute;
+      background:rgba(0,0,0,.3);
+      opacity:0;
+      transition:all .5s;
+    }
+    .avatar_profile {
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      /* transform: translateY(-100%); */
+      position: absolute;
+      
+    }
+    }
+
   h4 {
     @media (max-width:1180px) {
         font-size: 16px;

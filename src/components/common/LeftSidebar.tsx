@@ -2,18 +2,19 @@ import { BsTwitter } from 'react-icons/bs'
 import { RiHome7Fill } from 'react-icons/ri'
 import { GoSearch } from 'react-icons/go'
 import { IoNotificationsOutline } from 'react-icons/io5'
-
+import {CiCircleMore} from 'react-icons/ci'
+import {BiSolidUser} from 'react-icons/bi'
 
 import React from 'react';
 import styled from 'styled-components';
 const list = [
     {
         title: "Home",
-        path: '',
+        path: '/',
         icon: <RiHome7Fill />
     }, {
         title: "Explore",
-        path: '',
+        path: '/explore',
         icon: <GoSearch />
     }, {
         title: "Notifications",
@@ -28,7 +29,13 @@ const list = [
     }, {
         title: "Profile",
         path: '',
-        icon: <GoSearch />
+        icon: <BiSolidUser />
+
+    },
+    {
+        title: "More    ",
+        path: '',
+        icon: <CiCircleMore />
 
     },
 ]

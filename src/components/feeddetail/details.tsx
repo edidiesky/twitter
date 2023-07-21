@@ -25,7 +25,7 @@ const PostDetails: React.FC = () => {
             {/* top bar of user PostDetails */}
             <LeftSidebarIndex />
             <PostDetailsContent />
-            <RightSidebarIndex/>
+            <RightSidebarIndex types={'feeddetails'}/>
             {/* User feeds */}
         </PostDetailsStyles>
     )

@@ -4,14 +4,15 @@ import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
 import { LiaRetweetSolid } from 'react-icons/lia'
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const FeedCard = (props: feedcardtype) => {
     return (
         <FeedCardStyles key={props.tweet_id}>
-            <div className="flex w-90 auto item-start feed_card_wrapper gap-1">
+            <Link href={`/${props.username}/status/${props.tweet_id}`} className="flex w-90 auto item-start feed_card_wrapper gap-1">
                 <img src={props.image} alt="" className="avatar" />
                 <div className="flex column w-100" style={{ gap: '.3rem' }}>
-                    <h4 className="fs-18 text-extra-bold flex item-center" style={{ gap: '.2rem' }}>
+                    <h4 className="fs-18 text-dark text-extra-bold flex item-center" style={{ gap: '.2rem' }}>
                         {props.profile_name}
                         <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
                         <span className="text-light fs-16 text-grey ">@{props.username}</span>
@@ -21,7 +22,7 @@ const FeedCard = (props: feedcardtype) => {
                     </h5>
                     <div className="w-100 wrapper">
                         {
-                            props.tweet_image.map((x ,index)=> {
+                            props.tweet_image.map((x, index) => {
                                 return <img key={index} style={{ borderRadius: "10px" }} src={x} alt="" className="w-100 h-100" />
                             })
                         }
@@ -59,7 +60,7 @@ const FeedCard = (props: feedcardtype) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         </FeedCardStyles>
     )
 }
