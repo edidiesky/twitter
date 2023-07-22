@@ -19,9 +19,9 @@ const TweetFormSection = () => {
                     <div className="flex w-100 item-center justify-space">
                         <div className="flex item-center">
                             <div className="icons flex item-center justify-center">
-                                <BsImages fontSize={'20px'} />
+                                <BsImages fontSize={'18px'} />
                             </div> <div className="icons flex item-center justify-center">
-                                <BsEmojiSmile fontSize={'20px'} />
+                                <BsEmojiSmile fontSize={'18px'} />
                             </div>
                         </div>
                         <div className="btn btn-3 fs-14 text-extra-bold text-white">Reply</div>
@@ -38,9 +38,6 @@ const TweetFormSectionStyles = styled.div`
     border-bottom: 1px solid rgba(0,0,0,.08);
   font-family: "CustomFont2_light", sans-serif;
 
-    &:hover {
-        background-color: #f1f1f1;
-    }
     .btn-3 {
         background-color: var(--blue-1) !important;
         opacity: .6;
@@ -87,7 +84,7 @@ const TweetFormSectionStyles = styled.div`
         transition: all .5s;
 
         svg {
-            font-size: 20px;
+            /* font-size: 20px; */
             color:rgba(29, 156, 240, 0.835) ;
         }
         &:hover {

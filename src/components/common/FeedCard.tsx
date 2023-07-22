@@ -1,15 +1,28 @@
 import { feedcardtype } from '@/types/feedtype';
+import { AnimatePresence } from 'framer-motion';
 import { LiaRetweetSolid } from 'react-icons/lia'
-import {AiOutlineHeart} from 'react-icons/ai'
+import { AiOutlineHeart } from 'react-icons/ai'
 import { BiSolidBadgeCheck, BiBarChart, BiDotsHorizontalRounded } from 'react-icons/bi'
 import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import TweetModal from '../modals/TweetModal';
 
 const FeedCard = (props: feedcardtype) => {
+    const [tweet, setTweet] = useState(false)
     return (
         <FeedCardStyles key={props.tweet_id}>
+            <AnimatePresence
+                initial="false"
+                exitBeforeEnter={true}
+                onExitComplete={() => null}
+            >
+                {
+                    tweet && <TweetModal setModal={setTweet} modal={tweet} />
+                }
+            </AnimatePresence>
+
             <Link href={`/${props.username}/status/${props.tweet_id}`} className="flex w-90 auto item-start feed_card_wrapper gap-1">
                 <img src={props.image} alt="" className="avatar" />
                 <div className="flex column w-100" style={{ gap: '.3rem' }}>
@@ -34,7 +47,7 @@ const FeedCard = (props: feedcardtype) => {
             <div className="flex item-center w-85 auto gap-2">
                 <div className="flex item-center w-85 auto py-1 gap-2">
                     <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
-                        <div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
+                        <div onClick={()=> setTweet(true)} className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon1 flex item-center justify-center">
                                 <HiOutlineChatBubbleOvalLeft />
                             </div>

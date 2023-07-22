@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Notification = () => {
 
     return (
-        <NotificationStyles className='flex item-center fs-16 text-white' style={{ gap: "1rem" }}>
+        <NotificationStyles className='flex item-center fs-16 text-white shadow' style={{ gap: "1rem" }}>
             <AiOutlineArrowUp fontSize={'20px'} />
             <div className="flex item-center">
                 <img src="/images/johanna-richardson.jpg" alt="" className="avatar image_1" />
