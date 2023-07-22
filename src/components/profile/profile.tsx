@@ -51,23 +51,16 @@ const Profile: React.FC = () => {
 }
 
 const ProfileStyles = styled.div`
-    min-height: 100vh;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 22vw 1fr 30vw;
-    grid-gap: 1rem;
-  @media (max-width:1180px) {
-        grid-template-columns: 120px 1fr .7fr;
-  }
-  @media (max-width:980px) {
-    grid-template-columns: 100px 1fr .2fr;
-  }
-  @media (max-width:780px) {
-        grid-template-columns: 100px 1fr;
-  }
-  @media (max-width:480px) {
-        grid-template-columns: 1fr;
-  }
+    width: 100%;
+    display:flex;
+    gap:1rem;
+    height: 100vh;
+    overflow: auto;
+    align-items: flex-start;
+    @media (min-width:1380px) {
+        max-width: 1380px;
+        margin: 0 auto;
+    }
     .profilelist {
         border-bottom:1px solid rgba(0,0,0,.1);
         .profileTag {

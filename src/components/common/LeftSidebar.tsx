@@ -4,6 +4,7 @@ import { GoSearch } from 'react-icons/go'
 import { IoNotificationsOutline } from 'react-icons/io5'
 import {CiCircleMore} from 'react-icons/ci'
 import {BiSolidUser} from 'react-icons/bi'
+import {TbMailFilled} from 'react-icons/tb'
 
 import React from 'react';
 import styled from 'styled-components';
@@ -25,7 +26,7 @@ const list = [
     }, {
         title: "Messages",
         path: '',
-        icon: <GoSearch />
+        icon: <TbMailFilled />
 
     }, {
         title: "Profile",

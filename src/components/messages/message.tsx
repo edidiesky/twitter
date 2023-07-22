@@ -1,23 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import Top from './top/top';
 import LeftSidebarIndex from '../common/LeftSidebar';
-import RightSidebarIndex from '../common/right/RightBar';
-import Feed from '../common/feed/feed';
 import Content from './content/Content';
 
-const HomeIndex: React.FC = () => {
+const Message: React.FC = () => {
     return (
         <HomeStyles>
             <LeftSidebarIndex />
-            <Content />
-            <RightSidebarIndex />
+            <Content/>
         </HomeStyles>
     )
 }
 
 const HomeStyles = styled.div`
-    width: 100%;
+ width: 100%;
     display:flex;
     gap:1rem;
     height: 100vh;
@@ -29,4 +25,4 @@ const HomeStyles = styled.div`
     }
   `
 
-export default HomeIndex
+export default Message
