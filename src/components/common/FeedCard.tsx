@@ -1,7 +1,8 @@
 import { feedcardtype } from '@/types/feedtype';
-import { BiSolidBadgeCheck } from 'react-icons/bi'
-import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
 import { LiaRetweetSolid } from 'react-icons/lia'
+import {AiOutlineHeart} from 'react-icons/ai'
+import { BiSolidBadgeCheck, BiBarChart, BiDotsHorizontalRounded } from 'react-icons/bi'
+import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
@@ -27,40 +28,38 @@ const FeedCard = (props: feedcardtype) => {
                             })
                         }
                     </div>
-                    <div className="flex item-center w-100 gap-2">
-                        <div className="flex item-center fs-14 text-light feedtags_wrapper">
-                            <div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                <div className="icons icon1 flex item-center justify-center">
-                                    <HiOutlineChatBubbleOvalLeft />
-                                </div>
-                                23
-                            </div>
-                            <div className="flex iconwrapper text_2 item-center" style={{ gap: ".3rem" }}>
-                                <div className="icons icon2 flex item-center justify-center">
-                                    <LiaRetweetSolid fontSize={'24px'} />
-                                </div>
-                                144
-                            </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                <div className="icons icon1 flex item-center justify-center">
-                                    <HiOutlineChatBubbleOvalLeft />
-                                </div>
-                                23
-                            </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                <div className="icons icon1 flex item-center justify-center">
-                                    <HiOutlineChatBubbleOvalLeft />
-                                </div>
-                                23
-                            </div>
-                        </div>
-                        <div className="flex iconwrapper item-center fs-16 text-light" style={{ gap: ".3rem" }}>
+
+                </div>
+            </Link>
+            <div className="flex item-center w-85 auto gap-2">
+                <div className="flex item-center w-85 auto py-1 gap-2">
+                    <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
+                        <div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon1 flex item-center justify-center">
-                                <HiOutlineChatBubbleOvalLeft fontSize={'20px'} />
+                                <HiOutlineChatBubbleOvalLeft />
                             </div>
                             23
                         </div>
+                        <div className="flex iconwrapper text_2 item-center" style={{ gap: ".3rem" }}>
+                            <div className="icons icon2 flex item-center justify-center">
+                                <LiaRetweetSolid fontSize={'24px'} />
+                            </div>
+                            144
+                        </div><div className="flex iconwrapper text-3 item-center" style={{ gap: ".3rem" }}>
+                            <div className="icons icon3 flex item-center justify-center">
+                                <AiOutlineHeart />
+                            </div>
+                            23
+                        </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
+                            <div className="icons icon1 flex item-center justify-center">
+                                <BiBarChart />
+                            </div>
+                            123
+                        </div>
                     </div>
+
                 </div>
-            </Link>
+            </div>
         </FeedCardStyles>
     )
 }
@@ -77,7 +76,7 @@ const FeedCardStyles = styled.div`
     }
     .feedtags_wrapper {
         /* justify-content:center; */
-        gap:3rem;
+        gap:5rem;
         @media (max-width:580px) {
             gap:1rem;
         }
@@ -90,8 +89,13 @@ const FeedCardStyles = styled.div`
     .iconwrapper {
         transition: all .5s;
         cursor: pointer;
+        color:var(--dark-1);
         &:hover {
             color:rgba(29, 156, 240, 0.835) ;
+            &.text-3 {
+                color:rgba(223, 0, 104, 0.861) ;
+
+            }
             &.text_2 {
 
                 color:rgba(0, 186, 124, 0.802) ;
@@ -106,6 +110,12 @@ const FeedCardStyles = styled.div`
                 background-color: rgba(0,186,124,.1);
                 svg {
                     color:rgba(0, 186, 124, 0.802) ;
+                }
+            }
+            .icons.icon3 {
+                background-color: rgba(249,24,128,.1);
+                svg {
+                    color:rgba(223, 0, 104, 0.861) ;
                 }
             }
         }

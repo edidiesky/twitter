@@ -7,6 +7,7 @@ import {BiSolidUser} from 'react-icons/bi'
 
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link'
 const list = [
     {
         title: "Home",
@@ -47,9 +48,9 @@ const LeftSidebarIndex = () => {
             <div className="flex h-100 column justify-space wrapper auto gap-1">
                 <div className="flex w-100 column gap-1">
                     <div className="flex top w-100">
-                        <div className="icon flex item-center justify-center">
+                        <Link href={'/'} className="icon flex item-center justify-center">
                             <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
-                        </div>
+                        </Link>
                     </div>
                     <ul className="flex column item-start">
                         {
