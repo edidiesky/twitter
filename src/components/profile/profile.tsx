@@ -29,7 +29,7 @@ const Profile: React.FC = () => {
                     modal && <AuthModal modal={modal} setModal={setModal} />
                 }
             </AnimatePresence>
-            <div className="flex w-100 wrap column gap-2">
+            <div className="flex flex-1 wrap column gap-2">
                 <div className="flex column">
                     <Top />
                     <WallpaperIndex />

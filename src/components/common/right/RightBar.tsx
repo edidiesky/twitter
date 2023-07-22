@@ -24,10 +24,10 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                 <Search />
                 <div className="w-90 auto flex column gap-2">
                     {
-                        types === 'profile' && <div className="image_wrapper w-90 auto">
+                        types === 'profile' && <div className="image_wrappers w-90 auto">
                             {
                                 images.map((x, index) => {
-                                    return <img key={index} src={x} alt="" className="w-100" />
+                                    return <img key={index} src={x} alt="" className="" />
                                 })
                             }
                         </div>
@@ -125,6 +125,18 @@ const RightSidebarStyles = styled.div`
     border: 1px solid rgba(0,0,0,.08);
     border-radius: 15px;
     padding:1.5rem 2rem;
+  }
+  .image_wrappers {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 15px;
+    padding:1.5rem 2rem;
+
+    img {
+        width: 100%;
+    }
   }
   .image_wrapper {
       width:5rem;
