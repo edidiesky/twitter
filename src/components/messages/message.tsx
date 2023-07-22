@@ -16,8 +16,8 @@ const HomeStyles = styled.div`
  width: 100%;
     display:flex;
     gap:1rem;
-    height: 100vh;
-    overflow: auto;
+    /* height: 100vh;
+    overflow: auto; */
     align-items: flex-start;
     @media (min-width:1380px) {
         max-width: 1380px;

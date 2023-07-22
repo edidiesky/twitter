@@ -27,6 +27,7 @@ const RightContentStyles = styled.div`
         border-right : 1px solid rgba(0,0,0,.06);
         border-left : 1px solid rgba(0,0,0,.06);
         min-height: 100vh;
+        overflow:auto;
        
         .rightwrapper {
         width:95%;

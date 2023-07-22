@@ -91,7 +91,8 @@ const LeftContent: React.FC = () => {
 
 const LeftContentStyles = styled.div`
         flex:0 0 450px;
-        min-height: 100vh;
+        overflow:hidden;
+        max-height: 100vh;
         .iconwrapper {
         transition: all .5s;
         cursor: pointer;
