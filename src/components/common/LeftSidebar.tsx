@@ -29,12 +29,28 @@ const list = [
         icon: <TbMailFilled />
 
     }, {
-        title: "Profile",
+        title: "Lists",
         path: '',
         icon: <BiSolidUser />
 
     },
     {
+        title: "Communities",
+        path: '',
+        icon: <CiCircleMore />
+
+    }, {
+        title: "Verified",
+        path: '',
+        icon: <BiSolidUser />
+
+    },
+    {
+        title: "Profile    ",
+        path: '',
+        icon: <CiCircleMore />
+
+    }, {
         title: "More    ",
         path: '',
         icon: <CiCircleMore />
@@ -56,7 +72,7 @@ const LeftSidebarIndex = () => {
                     <ul className="flex column item-start">
                         {
                             list.map((x, index) => {
-                                return <li key={index} className="list flex item-center gap-2 text-light">
+                                return <li key={index} className="list text-dark flex item-center gap-2 text-light">
                                     {x.icon}
                                     <span className='span'>{x.title}</span></li>
                             })
@@ -108,8 +124,8 @@ const LeftSidebarStyles = styled.div`
     li {
         border-radius: 40px;
   text-align: center;
-  padding: 1.2rem 2rem;
-  font-size: 20px;
+  padding: 1rem 2rem;
+  font-size: 21px;
   @media (max-width:1180px) {
     align-items: flex-end;
     justify-content: flex-end;

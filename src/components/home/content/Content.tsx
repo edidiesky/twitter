@@ -9,7 +9,8 @@ const Content: React.FC = () => {
     return (
         <ContentStyles>
             <Top />
-            <Notification/>
+            {/* notification popup */}
+            {/* <Notification/> */}
             <TweetFormSection/>
             <Feed />
         </ContentStyles>
