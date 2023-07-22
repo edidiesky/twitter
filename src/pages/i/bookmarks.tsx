@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import '@/styles/Home.module.css'
-import HomeIndex from '@/components/home/Home'
 export default function Home() {
   return (
     <div>
