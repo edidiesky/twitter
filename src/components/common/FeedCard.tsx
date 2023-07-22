@@ -11,8 +11,21 @@ import TweetModal from '../modals/TweetModal';
 
 const FeedCard = (props: feedcardtype) => {
     const [tweet, setTweet] = useState(false)
+    const [drop, setDrop] = useState(false)
     return (
         <FeedCardStyles key={props.tweet_id}>
+            <div className={drop ? "dropdownCard  flex column active" : "dropdownCard  flex column"}>
+                <div onClick={() => setDrop(false)} className="dropdown_background"></div>
+                <ul onClick={() => setDrop(false)} className="flex column w-100 fs-14 text-bold">
+                    <li className="flex item-center gap-1">Not interested in this tweet</li>
+                    <li className="flex item-center gap-1">Follow Alexander</li>
+                    <li className="flex item-center gap-1">Add or remove @Alexander form lists</li>
+                    <li className="flex item-center gap-1">Mute Alexander</li>
+                    <li className="flex item-center gap-1">Block Alexander</li>
+                    <li className="flex item-center gap-1">Mute tweet</li>
+                    <li className="flex item-center gap-1">Report tweet</li>
+                </ul>
+            </div>
             <AnimatePresence
                 initial="false"
                 exitBeforeEnter={true}
@@ -22,7 +35,9 @@ const FeedCard = (props: feedcardtype) => {
                     tweet && <TweetModal setModal={setTweet} modal={tweet} />
                 }
             </AnimatePresence>
-
+            <div onClick={() => setDrop(true)} className="icons2 flex item-center justify-center">
+                <BiDotsHorizontalRounded fontSize={'20px'} />
+            </div>
             <Link href={`/${props.username}/status/${props.tweet_id}`} className="flex w-90 auto item-start feed_card_wrapper gap-1">
                 <img src={props.image} alt="" className="avatar" />
                 <div className="flex column w-100" style={{ gap: '.3rem' }}>
@@ -47,7 +62,7 @@ const FeedCard = (props: feedcardtype) => {
             <div className="flex item-center w-85 auto gap-2">
                 <div className="flex item-center w-85 auto py-1 gap-2">
                     <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
-                        <div onClick={()=> setTweet(true)} className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
+                        <div onClick={() => setTweet(true)} className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon1 flex item-center justify-center">
                                 <HiOutlineChatBubbleOvalLeft />
                             </div>
@@ -80,9 +95,89 @@ const FeedCard = (props: feedcardtype) => {
 const FeedCardStyles = styled.div`
     width: 100%;
     padding: 1.5rem .7rem;
+   position: relative;
     border-bottom: 1px solid rgba(0,0,0,.1);
     &:hover {
         background-color: #f1f1f1;
+    }
+    .dropdownCard {
+        position: absolute;
+        right: 2%;
+        top: 8px;
+        z-index: 40;
+        cursor: pointer;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        height: 0;
+        transition: all .3s;    
+        opacity:0;
+        visibility: hidden;
+        .dropdown_background {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 30;
+            top: 0;
+            left:0;
+            background-color: transparent;
+        }
+        &.active {
+            height: 280px;
+            opacity:1;
+                visibility: visible;
+            ul {
+
+            li {
+                padding: 1.1rem 1.4rem;
+                opacity:1;
+                visibility: visible;
+                width: 100%;
+                transition: all .4s;
+                &:hover {
+                   background-color: #f1f1f1;
+
+               }
+            }
+           }
+        }
+        ul {
+            z-index: 35;
+
+li { 
+    padding: 1.1rem 1.4rem;
+    opacity:0;
+    visibility: hidden;
+    width: 100%;
+    &:hover {
+       background-color: #f1f1f1;
+
+   }
+}
+}
+        
+    }
+    .icons2 {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        transition: all .5s;
+        position: absolute;
+        right: 2%;
+        top: 8px;
+        /* z-index:40; */
+        cursor: pointer;
+
+        svg {
+            font-size: 20px;
+        }
+        &:hover {
+            background-color: rgba(29,155,240,.1);
+                svg {
+                    color:rgba(29, 156, 240, 0.835) ;
+                }
+        }
     }
     img {
         object-fit: cover;
