@@ -4,10 +4,12 @@ import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from 'react-icons/bs'
 import Link from 'next/link'
 import { FaFacebook, FaGithub } from "react-icons/fa";
+import RegsiterModal from "../modals/RegisterModal";
 
 const Regsiters: React.FC = () => {
   return (
     <RegsiterStyles style={{ overflow: "hidden" }}>
+      <RegsiterModal/>
       <div className="w-100">
         <img src="https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png" alt="" className="image w-100 h-100" />
       </div>
@@ -54,16 +56,29 @@ const RegsiterStyles = styled.div`
   display:grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
+  @media (max-width:980px) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 5rem;
+  }
   .auth_right {
     justify-content: space-around;
+    padding: 2rem 0;
   }
   
   h1 {
     font-size: 70px;
     font-weight: 700;
+    @media (max-width:1080px) {
+    font-size: 50px;
+  }
   }
   .authWrapper {
     width: 55%;
+    @media (max-width:1080px) {
+    width: 75%;
+
+    }
   }
   .btn {
     padding: 1rem 2rem !important;
@@ -71,7 +86,7 @@ const RegsiterStyles = styled.div`
   }
   .authBtn {
     border: 1px solid rgba(0, 0, 0, .08);
-    padding: 1rem 4rem;
+    padding: .9rem 4rem;
     border-radius: 40px;
     width: 100%;
     cursor: pointer;
