@@ -53,7 +53,7 @@ export const slideUp = {
    
   },
   visible: {
-    transform: "translateY(0) ",
+    transform: "translateY(0)",
     opacity: 1,
     transition: {
       duration: 0.3,
