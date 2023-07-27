@@ -6,7 +6,7 @@ import RightSidebarIndex from '../common/right/RightBar';
 import LeftSidebarIndex from '../common/LeftSidebar';
 import Top from './top/top';
 import Feed from '../common/feed/feed';
-import AuthModal from '../modals/AuthModal';
+import AuthModal from '../modals/EditProfileModal';
 import { AnimatePresence } from 'framer-motion';
 
 type Rightbar = {
