@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600&display=swap");
 
 @font-face {
   font-family: "CustomFont2_light";
   src: url("../assets/Segoe\ UI.ttf") format("truetype");
 }
-
 
 @font-face {
   font-family: "CustomFont2_bold";
@@ -65,7 +63,6 @@ body {
 .family1 {
   font-family: "CustomFont2_light", sans-serif;
 }
-
 
 .shadow {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
@@ -138,7 +135,6 @@ h2 {
   transition: all 0.4s;
   border-radius: 50%;
   cursor: pointer;
-  
 }
 .icon:hover {
   background-color: #f7f7f7;
@@ -149,12 +145,10 @@ h2 {
   transition: all 0.4s;
   border-radius: 50%;
   cursor: pointer;
-  
 }
 .icons:hover {
   background-color: #f7f7f7;
 }
-
 
 .input,
 button {
@@ -196,7 +190,6 @@ button {
 .text-grey {
   /* color: var(--grey-1); */
   color: rgb(83, 100, 113);
-
 }
 
 .text-grey2 {
@@ -275,17 +268,17 @@ button {
 }
 
 .text-extra-bold {
-  font-family: 'CustomFont2_bold',sans-serif;
+  font-family: "CustomFont2_bold", sans-serif;
   font-weight: 700;
 }
 
 .text-bold {
   font-weight: 600;
-  font-family: 'CustomFont2_bold',sans-serif;
+  font-family: "CustomFont2_bold", sans-serif;
 }
 
 .text-light {
-  font-family: 'CustomFont2_light',sans-serif;
+  font-family: "CustomFont2_light", sans-serif;
   font-weight: 400;
 }
 
