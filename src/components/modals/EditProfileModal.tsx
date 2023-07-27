@@ -79,6 +79,9 @@ const DeleteContainer = styleds(motion.div)`
   align-items: center;
   justify-content: center;
   top: 0;
+  position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
   .formwraper {
     padding-bottom: 3rem;
   }
@@ -275,6 +278,13 @@ const DeleteContainer = styleds(motion.div)`
     position: relative;
     height: 60rem;
     overflow: auto;
+
+    @media (max-width:980px) {
+      width: 70%;
+    }
+    @media (max-width:580px) {
+      width: 90%;
+    }
 
   }
   .deleteCard_wrapper {

@@ -13,13 +13,10 @@ type modalType = {
 }
 
 const RegsiterModal: React.FC<modalType> = ({ modal, setModal }) => {
-  const [register, setRegsiter] = useState(false);
-  const [bio, setBio] = useState('false');
-  const [website, setWebsite] = useState('');
+  const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [location, setLocation] = useState('');
+  const [password, setPassword] = useState('');
   const [index, setIndex] = useState(0);
-
 
   return (
     <RegisterModalStyles
@@ -90,9 +87,10 @@ const RegsiterModal: React.FC<modalType> = ({ modal, setModal }) => {
 
             <div className="w-85 formwraper auto flex column gap-3">
               <h4 className="fs-30 text-extra-bold">Create your account</h4>
-              <div className="flex w-100 column gap-2">
+              <div className="flex w-100 column" style={{ gap: "10px" }}>
                 <FormInput state={name} label={'Name'} setState={setName} />
-                <FormInput state={name} label={'Name'} setState={setName} />
+                <FormInput state={email} label={'Email'} setState={setEmail} />
+                <FormInput state={password} label={'Password'} setState={setPassword} />
                 <div className="flex column gap-1">
                   <h5 className="fs-16 py-2 text-extra-bold">  Date of birth
                     <span className="text-light py-1 block text-grey">This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</span>
@@ -115,7 +113,9 @@ const RegisterModalStyles = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  left: 0;
+  position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
   display: flex;
   z-index: 3800;
   align-items: center;
@@ -124,7 +124,7 @@ const RegisterModalStyles = styled(motion.div)`
   .formwraper {
     padding-bottom: 3rem;
   }
-  .btn {
+  .btn.btn-1 {
     padding:1.6rem 2rem !important;
     background-color: #9e9e9eec !important;
   }
@@ -217,51 +217,6 @@ const RegisterModalStyles = styled(motion.div)`
     display: none;
   }
   }
-  .image_wrapper {
-      width:12rem;
-      height:12rem;
-      position: relative;
-      border-radius:50%;
-      cursor:pointer;
-      transform:translate(10%,-50%);
-      border:5px solid #fff;
-      &:hover {
-        .image_gradient{
-          opacity:1;
-        }
-      }
-    }
-    .image_gradient {
-      width:100%;
-      height:100%;
-      border-radius:50%;
-      /* transform: translateY(-100%); */
-      position: absolute;
-      background:rgba(0,0,0,.5);
-      opacity:0;
-      transition:all .5s;
-    }
-    .avatar_profile {
-      width:100%;
-      height:100%;
-      border-radius:50%;
-      /* transform: translateY(-100%); */
-      position: absolute;
-      
-    }
-  .profile_background {
-    background-color: #B2B2B2;
-    height: 20rem;
-    position:relative;
-  }
-  .btn-3 {
-        padding: 1rem 2rem;
-  }
-  .icon {
-  }
-  .icon:hover {
-    background-color: #ccc;
-  }
   .RegsiterBottom {
     position: relative;
     padding: 0 1rem;
@@ -323,6 +278,12 @@ const RegisterModalStyles = styled(motion.div)`
     min-height: 60rem;
     border-radius:20px;
     border-top-right-radius:20px;
+    @media (max-width:980px) {
+      width: 70%;
+    }
+    @media (max-width:580px) {
+      width: 90%;
+    }
 
   }
   .deleteCard_wrapper {

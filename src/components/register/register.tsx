@@ -2,14 +2,24 @@ import React, { useState } from "react";
 import { styled } from "styled-components";
 import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from 'react-icons/bs'
+import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link'
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import RegsiterModal from "../modals/RegisterModal";
 
 const Regsiters: React.FC = () => {
+  const [registermodal, setRegisterModal] = useState(false)
   return (
     <RegsiterStyles style={{ overflow: "hidden" }}>
-      <RegsiterModal/>
+      <AnimatePresence
+        initial="false"
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {registermodal && <RegsiterModal modal={registermodal}
+          setModal={setRegisterModal} />}
+      </AnimatePresence>
+
       <div className="w-100">
         <img src="https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png" alt="" className="image w-100 h-100" />
       </div>
@@ -36,7 +46,7 @@ const Regsiters: React.FC = () => {
               </div>
             </div>
             <div className="option">or</div>
-            <div className="btn btn-2 fs-16 text-bold text-white">Create account</div>
+            <div onClick={() => setRegisterModal(true)} className="btn btn-2 fs-16 text-bold text-white">Create account</div>
             <h5 className="fs-12 text-grey text-light">By signing up, you agree to the <span className="text-blue">Terms of Service</span> and <span className="text-blue">Privacy Policy</span>, including Cookie Use.</h5>
           </div>
           <div className="flex authWrapper column gap-2">
@@ -67,7 +77,7 @@ const RegsiterStyles = styled.div`
   }
   
   h1 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 700;
     @media (max-width:1080px) {
     font-size: 50px;
