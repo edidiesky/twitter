@@ -12,7 +12,7 @@ const Regsiters: React.FC = () => {
   return (
     <RegsiterStyles style={{ overflow: "hidden" }}>
       <AnimatePresence
-        initial="false"
+        initial={"false"}
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >

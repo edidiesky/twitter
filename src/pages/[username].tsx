@@ -5,7 +5,7 @@ import Profile from "@/components/profile/profile";
 
 export default function UserProfile() {
   const router = useRouter();
-  console.log(router.query.username);
+  // console.log(router.query.username);
   return (
     <div>
       <Head>
