@@ -111,14 +111,18 @@ const FeedCardStyles = styled.div`
         top: 8px;
         z-index: 40;
         cursor: pointer;
-        width: 300px;
+        width: 350px;
         border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+        background-color: var(--white);
         height: 0;
         transition: all .3s;    
         opacity:0;
         visibility: hidden;
+        @media (max-width:400px) {
+        width: 310px;
+
+        }
         .dropdown_background {
             width: 100vw;
             height: 100vh;
@@ -129,19 +133,29 @@ const FeedCardStyles = styled.div`
             background-color: transparent;
         }
         &.active {
-            height: 280px;
+            height: 350px;
+            @media (max-width:400px) {
+        width: 310px;
+        height: 320px;
+
+        }
             opacity:1;
                 visibility: visible;
             ul {
 
             li {
-                padding: 1.1rem 1.4rem;
+                padding:1.5rem 2.4rem;
                 opacity:1;
                 visibility: visible;
                 width: 100%;
                 transition: all .4s;
+                @media (max-width:400px) {
+                padding:1.7rem 2rem;
+
+                }
                 &:hover {
-                   background-color: #f1f1f1;
+                   /* background-color: #f1f1f1; */
+                   background-color: var(--dark-grey-hover);
 
                }
             }
@@ -151,7 +165,7 @@ const FeedCardStyles = styled.div`
             z-index: 35;
 
 li { 
-    padding: 1.1rem 1.4rem;
+    padding: 1.4rem;
     opacity:0;
     visibility: hidden;
     width: 100%;

@@ -72,7 +72,7 @@ const PostDetailsComments: React.FC = () => {
 
                             </div>
                             <div className="flex commenticon justify-space flex-1 item-center w-100 gap-2">
-                                <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
+                                <div className="flex w-100 item-center  text-light feedtags_wrapper">
                                     <div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
                                         <div className="icons icon1 flex item-center justify-center">
                                             <HiOutlineChatBubbleOvalLeft />
@@ -114,6 +114,9 @@ h5 {
     @media (max-width:780px) {
             font-size: 15px;
         }
+        @media (max-width:380px) {
+            font-size: 13px;
+        }
 }
 
     .icons {
@@ -136,6 +139,10 @@ h5 {
         transition: all .5s;
         cursor: pointer;
         flex:1;
+        font-size: 16px !important;
+        @media (max-width:500px) {
+            font-size: 14px !important;
+        }
         &:hover {
             color:rgba(29, 156, 240, 0.835) ;
             &.text_2 {
@@ -163,6 +170,9 @@ h5 {
 
         svg {
             font-size: 20px;
+            @media (max-width:380px) {
+            font-size: 20px !important;
+        }
         }
     }
 }

@@ -4,8 +4,10 @@ import { BiDotsHorizontalRounded } from 'react-icons/bi'
 
 import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
 import { LiaRetweetSolid } from 'react-icons/lia'
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { AnimatePresence } from 'framer-motion';
+import TweetModal from '../modals/TweetModal';
 
 const postfeedDetails = {
     tweet_id: 15,
@@ -23,8 +25,31 @@ const postfeedDetails = {
 }
 
 const PostFeedCard = () => {
+    const [tweet, setTweet] = useState(false)
+    const [drop, setDrop] = useState(false)
     return (
         <FeedCardStyles key={postfeedDetails.tweet_id}>
+            <div className={drop ? "dropdownCard  flex column active" : "dropdownCard  flex column"}>
+                <div onClick={() => setDrop(false)} className="dropdown_background"></div>
+                <ul onClick={() => setDrop(false)} className="flex column w-100 fs-14 text-bold">
+                    <li className="flex item-center gap-1">Not interested in this tweet</li>
+                    <li className="flex item-center gap-1">Follow Alexander</li>
+                    <li className="flex item-center gap-1">Add or remove @Alexander form lists</li>
+                    <li className="flex item-center gap-1">Mute Alexander</li>
+                    <li className="flex item-center gap-1">Block Alexander</li>
+                    <li className="flex item-center gap-1">Mute tweet</li>
+                    <li className="flex item-center gap-1">Report tweet</li>
+                </ul>
+            </div>
+            <AnimatePresence
+                initial="false"
+                exitBeforeEnter={true}
+                onExitComplete={() => null}
+            >
+                {
+                    tweet && <TweetModal setModal={setTweet} modal={tweet} />
+                }
+            </AnimatePresence>
             <div className="flex w-90 auto item-start justify-space feed_card_wrapper gap-1">
                 <div className="flex column gap-1">
                     <div className="flex-1 item-start flex gap-1">
@@ -53,42 +78,11 @@ const PostFeedCard = () => {
                                 })
                             }
                         </div>
-                        <div className="flex item-center w-100 gap-2">
-                            <div className="flex item-center fs-14 text-light feedtags_wrapper">
-                                <div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                    <div className="icons icon1 flex item-center justify-center">
-                                        <HiOutlineChatBubbleOvalLeft />
-                                    </div>
-                                    23
-                                </div>
-                                <div className="flex iconwrapper text_2 item-center" style={{ gap: ".3rem" }}>
-                                    <div className="icons icon2 flex item-center justify-center">
-                                        <LiaRetweetSolid fontSize={'24px'} />
-                                    </div>
-                                    144
-                                </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                    <div className="icons icon1 flex item-center justify-center">
-                                        <HiOutlineChatBubbleOvalLeft />
-                                    </div>
-                                    23
-                                </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                    <div className="icons icon1 flex item-center justify-center">
-                                        <HiOutlineChatBubbleOvalLeft />
-                                    </div>
-                                    23
-                                </div>
-                            </div>
-                            <div className="flex iconwrapper item-center fs-16 text-light" style={{ gap: ".3rem" }}>
-                                <div className="icons icon1 flex item-center justify-center">
-                                    <HiOutlineChatBubbleOvalLeft fontSize={'20px'} />
-                                </div>
-                                23
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div className="flex item-center justify-end">
-                    <div className="icons flex item-center justify-center">
+                    <div onClick={() => setDrop(true)} className="icons flex item-center justify-center">
                         <BiDotsHorizontalRounded fontSize={'20px'} />
                     </div>
                 </div>
@@ -99,6 +93,7 @@ const PostFeedCard = () => {
 
 const FeedCardStyles = styled.div`
     width: 100%;
+   position: relative;
     padding: 1.5rem .7rem;
     border-bottom: 1px solid var(--border);
     &:hover {
@@ -121,6 +116,65 @@ const FeedCardStyles = styled.div`
                     color:rgba(29, 156, 240, 0.835) ;
                 }
         }
+    }
+    .dropdownCard {
+        position: absolute;
+        right: 2%;
+        top: 8px;
+        z-index: 40;
+        cursor: pointer;
+        width: 350px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+        background-color: var(--white);
+        height: 0;
+        transition: all .3s;    
+        opacity:0;
+        visibility: hidden;
+        .dropdown_background {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 30;
+            top: 0;
+            left:0;
+            background-color: transparent;
+        }
+        &.active {
+            height: 350px;
+            opacity:1;
+                visibility: visible;
+            ul {
+
+            li {
+                padding:2rem 2.4rem;
+                opacity:1;
+                visibility: visible;
+                width: 100%;
+                transition: all .4s;
+                &:hover {
+                   /* background-color: #f1f1f1; */
+                   background-color: var(--dark-grey-hover);
+
+               }
+            }
+           }
+        }
+        ul {
+            z-index: 35;
+
+li { 
+    padding: 1.4rem;
+    opacity:0;
+    visibility: hidden;
+    width: 100%;
+    &:hover {
+       background-color: #f1f1f1;
+
+   }
+}
+}
+        
     }
     .image_wrapper {
       width:5rem;
