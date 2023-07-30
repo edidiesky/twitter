@@ -1,0 +1,1 @@
+Guys for u to use import statemtnt in next and typescript you have to name your files as .mjs and import tyh type:module in your package.json
