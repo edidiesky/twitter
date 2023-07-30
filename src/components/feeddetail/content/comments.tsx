@@ -47,53 +47,60 @@ const PostDetailsComments: React.FC = () => {
         <PostDetailsCommentsStyles className='w-100 flex column '>
             {
                 postcomments.map((x, index) => {
-                    return <div key={index} className="postCard w-100 flex item-start justify-space">
-                        <div className="flex item-start gap-2">
-                            <div className="image_wrapper">
-                                <img src={x.image} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
-                                <div className="image_gradient"></div>
-                            </div>
-                            <div className="flex column " style={{ gap: ".3rem" }}>
-                                <h4 className="fs-16 text-bold flex item-center" style={{ gap: '.2rem' }}>
-                                    {x.profile_name}
-                                    <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
-                                    <span className="text-light fs-16 text-grey ">@{x.username}</span>
-                                </h4>
-                                <h5 className="fs-16 text-light">{x.tweet_text}</h5>
-                                <div className="flex item-center w-100 gap-2">
-                                    <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
-                                        <div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                            <div className="icons icon1 flex item-center justify-center">
-                                                <HiOutlineChatBubbleOvalLeft />
-                                            </div>
-                                            23
-                                        </div>
-                                        <div className="flex iconwrapper text_2 item-center" style={{ gap: ".3rem" }}>
-                                            <div className="icons icon2 flex item-center justify-center">
-                                                <LiaRetweetSolid fontSize={'24px'} />
-                                            </div>
-                                            144
-                                        </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                            <div className="icons icon1 flex item-center justify-center">
-                                                <HiOutlineChatBubbleOvalLeft />
-                                            </div>
-                                            23
-                                        </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
-                                            <div className="icons icon1 flex item-center justify-center">
-                                                <BiBarChart />
-                                            </div>
-                                            123
-                                        </div>
-                                    </div>
+                    return <div key={index} className="postCard w-100 flex item-start justify-space gap-2">
+                        <div className="image_wrapper">
+                            <img src={x.image} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
+                            <div className="image_gradient"></div>
+                        </div>
 
+                        <div className="flex w-100 column gap-1">
+                            <div className="flex item-start justify-space gap-1 w-100 " style={{ gap: ".3rem" }}>
+                                <div className="flex column">
+                                    <h4 className="fs-16 text-bold flex item-center" style={{ gap: '.2rem' }}>
+                                        {x.profile_name}
+                                        <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
+                                        <span className="text-light fs-16 text-grey ">@{x.username}</span>
+                                    </h4>
+                                    <h5 className="fs-16 text-light">{x.tweet_text}</h5>
                                 </div>
+
+                                <div className="flex item-center justify-end">
+                                    <div className="icons flex item-center justify-center">
+                                        <BiDotsHorizontalRounded fontSize={'20px'} />
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <div className="flex item-center justify-end">
-                            <div className="icons flex item-center justify-center">
-                                <BiDotsHorizontalRounded fontSize={'20px'} />
+                            <div className="flex commenticon justify-space flex-1 item-center w-100 gap-2">
+                                <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
+                                    <div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
+                                        <div className="icons icon1 flex item-center justify-center">
+                                            <HiOutlineChatBubbleOvalLeft />
+                                        </div>
+                                        23
+                                    </div>
+                                    <div className="flex iconwrapper text_2 item-center" style={{ gap: ".3rem" }}>
+                                        <div className="icons icon2 flex item-center justify-center">
+                                            <LiaRetweetSolid fontSize={'24px'} />
+                                        </div>
+                                        144
+                                    </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
+                                        <div className="icons icon1 flex item-center justify-center">
+                                            <HiOutlineChatBubbleOvalLeft />
+                                        </div>
+                                        23
+                                    </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
+                                        <div className="icons icon1 flex item-center justify-center">
+                                            <BiBarChart />
+                                        </div>
+                                        123
+                                    </div>
+                                </div>
+
                             </div>
+
                         </div>
+
                     </div>
                 })
             }
@@ -102,6 +109,12 @@ const PostDetailsComments: React.FC = () => {
 }
 
 const PostDetailsCommentsStyles = styled.div`
+
+h5 {
+    @media (max-width:780px) {
+            font-size: 15px;
+        }
+}
 
     .icons {
         width: 4rem;
@@ -186,9 +199,10 @@ const PostDetailsCommentsStyles = styled.div`
     .postCard {
         width: 100%;
     padding: 1.5rem;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid var(--border);
     &:hover {
-        background-color: #f1f1f1;
+        /* background-color: #f1f1f1; */
+        background-color: var(--dark-grey-hover);
     }
     }
   `

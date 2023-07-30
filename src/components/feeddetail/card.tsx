@@ -100,9 +100,10 @@ const PostFeedCard = () => {
 const FeedCardStyles = styled.div`
     width: 100%;
     padding: 1.5rem .7rem;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid var(--border);
     &:hover {
-        background-color: #f1f1f1;
+        /* background-color: #f1f1f1; */
+        background-color: var(--dark-grey-hover);
     }
     
     .icons {

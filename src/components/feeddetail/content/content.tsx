@@ -52,13 +52,13 @@ const PostDetailsContent: React.FC = () => {
 
 const PostDetailsContentStyles = styled.div`
         flex: 1;
-        border-right : 1px solid rgba(0,0,0,.1);
-        border-left : 1px solid rgba(0,0,0,.1);
+        border-right : 1px solid var(--border);
+        border-left : 1px solid var(--border);
         min-height: 100vh;
 
         .bottom {
             padding:1.3rem 0;
-            border-bottom : 1px solid rgba(0,0,0,.1);
+            border-bottom : 1px solid var(--border);
 
         }
 

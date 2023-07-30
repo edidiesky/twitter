@@ -38,7 +38,7 @@ const FeedCard = (props: feedcardtype) => {
             <div onClick={() => setDrop(true)} className="icons2 flex item-center justify-center">
                 <BiDotsHorizontalRounded fontSize={'20px'} color='var(--dark-grey)' />
             </div>
-            <Link href={`/${props.username}/status/${props.tweet_id}`} className="flex w-90 auto item-start feed_card_wrapper gap-1">
+            <Link prefetch href={`/${props.username}/status/${props.tweet_id}`} className="flex w-90 auto item-start feed_card_wrapper gap-1">
                 <img src={props.image} alt="" className="avatar" />
                 <div className="flex column w-100" style={{ gap: '.3rem' }}>
                     <h4 className="fs-18 text-dark text-extra-bold flex item-center" style={{ gap: '.2rem' }}>
@@ -99,6 +99,11 @@ const FeedCardStyles = styled.div`
     border-bottom: 1px solid var(--border);
     &:hover {
         background-color: var(--dark-grey-hover);
+    }
+    h5 {
+        @media (max-width:780px) {
+        font-size: 14px !important;
+    }
     }
     .dropdownCard {
         position: absolute;
@@ -242,8 +247,8 @@ li {
         font-size: 16px;
         font-weight: 300;
         line-height: 20px;
-        @media (max-width:580px) {
-            font-size: 15px;
+        @media (max-width:780px) {
+            font-size: 14px;
         }
     }
   `

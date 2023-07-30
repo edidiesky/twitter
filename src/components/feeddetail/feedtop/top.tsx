@@ -14,7 +14,7 @@ const Top: React.FC<modalType> = ({ setModal }) => {
             <div className='flex item-center gap-2 w-90 auto'>
                 {/* <h2 className="fs-30">Top bar</h2> */}
                 <Link href={'/'} className="icons flex item-center justify-center"><AiOutlineArrowLeft color='var(--dark-1)' fontSize={'20px'} /></Link>
-                <h3 className="fs-20 text-bold text-dark">Tweets
+                <h3 className="fs-24 text-bold text-dark">Tweets
                 </h3>
             </div>
 
@@ -27,11 +27,12 @@ width: 100%;
 color: #fff;
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.473);
-  z-index: 300;
-  backdrop-filter: blur(54px);
-  padding:1rem 0;
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 30;
+  padding: 1rem 0;
+  backdrop-filter: blur(12px);
+  /* height: 10rem; */
+  border-bottom: 1px solid var(--border);
   `
 
 export default Top

@@ -90,7 +90,7 @@ const LeftSidebarIndex = () => {
                     </div>
                 </div>
                 <div className="w-85 auto">
-                    <div style={{gap:".5rem"}} className="profilewrapper w-100 flex item-center">
+                    <div style={{ gap: ".5rem" }} className="profilewrapper w-100 flex item-center">
                         <img src="/images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
                         <h4 className="fs-16 text-dark text-bold text-start w-100">
                             {username}
@@ -110,6 +110,10 @@ const LeftSidebarStyles = styled.div`
    position: sticky;
    top: 0;
     /* overflow: hidden; */
+    @media (max-width:780px) {
+        flex: 0 0 80px;
+
+  }
     @media (max-width:480px) {
         display: none;
   }
@@ -164,6 +168,9 @@ const LeftSidebarStyles = styled.div`
   }
   svg {
     font-size: 30px;
+    @media (max-width:780px) {
+        font-size: 25px;
+    }
   }
   &:hover {
   /* background-color: #c7c6c6; */

@@ -25,18 +25,19 @@ const TopStyles = styled.div`
     color: #fff;
   position: sticky;
   top: 0;
-  background-color: var(--white);
+  background-color: rgba(0, 0, 0, 0.65);
   z-index: 30;
   /* padding: 1rem 0; */
-  backdrop-filter: blur(34px);
+  backdrop-filter: blur(12px);
   /* height: 10rem; */
   border-bottom: 1px solid var(--border);
   /* backdrop-filter: c; */
   .tab {
-    padding: 1.6rem 2rem;
+    padding: 2rem;
     &.tab-1 {
         &:hover {
-            background-color: #e9e9e9;
+            /* background-color: #e9e9e9; */
+            background-color: rgba(231, 233, 234, 0.1);
         }
         .spans {
             width: max-content;
