@@ -36,7 +36,7 @@ const FeedCard = (props: feedcardtype) => {
                 }
             </AnimatePresence>
             <div onClick={() => setDrop(true)} className="icons2 flex item-center justify-center">
-                <BiDotsHorizontalRounded fontSize={'20px'} />
+                <BiDotsHorizontalRounded fontSize={'20px'} color='var(--dark-grey)' />
             </div>
             <Link href={`/${props.username}/status/${props.tweet_id}`} className="flex w-90 auto item-start feed_card_wrapper gap-1">
                 <img src={props.image} alt="" className="avatar" />
@@ -46,7 +46,7 @@ const FeedCard = (props: feedcardtype) => {
                         <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
                         <span className="text-light fs-16 text-grey ">@{props.username}</span>
                     </h4>
-                    <h5 style={{ paddingBottom: "1rem" }} className="text-light family1 fs-14">
+                    <h5 style={{ paddingBottom: "1rem" }} className="text_dark_grey text-light family1 fs-14">
                         {props.tweet_text}
                     </h5>
                     <div className="w-100 wrapper">
@@ -60,7 +60,7 @@ const FeedCard = (props: feedcardtype) => {
                 </div>
             </Link>
             <div className="flex item-center w-85 auto gap-2">
-                <div className="flex item-center w-85 auto py-1 gap-2">
+                <div className="flex item-center w-85 auto gap-2">
                     <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
                         <div onClick={() => setTweet(true)} className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon1 flex item-center justify-center">
@@ -96,9 +96,9 @@ const FeedCardStyles = styled.div`
     width: 100%;
     padding: 1.5rem .7rem;
    position: relative;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    border-bottom: 1px solid var(--border);
     &:hover {
-        background-color: #f1f1f1;
+        background-color: var(--dark-grey-hover);
     }
     .dropdownCard {
         position: absolute;
@@ -240,7 +240,6 @@ li {
 }
     h5 {
         font-size: 16px;
-        color: rgb(15, 20, 25);
         font-weight: 300;
         line-height: 20px;
         @media (max-width:580px) {

@@ -35,7 +35,7 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                     {
                         types === 'feeddetails' &&
                         <div className="feed_participant w-90 auto flex column gap-2">
-                            <h3 className="text-extra-bold w-100 auto">
+                            <h3 className="text-extra-bold text_dark_grey w-100 auto">
                                 Relevant People</h3>
                             <div className="w-100 flex item-start justify-space gap-1">
                                 <div className="image_wrapper">
@@ -71,7 +71,7 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                             <div className="btn text-extra-bold btn-3 fs-16 text-white">Get Verfied</div>
                         </div> */}
                     <div className="verfiy_wrapper wrapper2 w-90 auto flex column item-start">
-                        <h3 className="text-extra-bold w-90 auto">
+                        <h3 className="text-extra-bold text_dark_grey w-90 auto">
                             You might like</h3>
                         <div className="flex column w-100">
                             {
@@ -83,7 +83,7 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                                                 <img src={x.image} alt="" className="avatar" />
                                             </div>
 
-                                            <h4 className="fs-16 text-extra-bold flex column" style={{ gap: ".2rem" }}>
+                                            <h4 className="fs-16 text_dark_grey text-extra-bold flex column" style={{ gap: ".2rem" }}>
                                                 {x.name}
                                                 <span className="block fs-14 text-grey text-light">
                                                     {x.username}
@@ -208,7 +208,7 @@ const RightSidebarStyles = styled.div`
         gap: 1rem;
 
         &:hover {
-            background-color:#e5ecef;
+            background-color:var(--dark-grey-hover);
         }
     }
     .verfiy_wrapper {
