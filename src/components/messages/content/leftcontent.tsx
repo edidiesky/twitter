@@ -47,18 +47,18 @@ const LeftContent: React.FC = () => {
         <LeftContentStyles>
             <div className="flex column py-1 w-100 column gap-2">
                 <div className="top w-90 auto flex item-center justify-space">
-                    <h3 className="fs-24 text-bold">Messages</h3>
+                    <h3 className="fs-20 text-bold text-dark">Messages</h3>
                     <div className="flex item-center justify-end">
                         <div className="icons flex item-center justify-center">
-                            <FiSettings fontSize={'20px'} />
+                            <FiSettings fontSize={'20px'} color='var(--dark-1)' />
                         </div>
                         <div className="icons flex item-center justify-center">
-                            <LuMailPlus fontSize={'20px'} />
+                            <LuMailPlus fontSize={'20px'} color='var(--dark-1)' />
                         </div>
                     </div>
                 </div>
                 <div className="search w-90 auto flex item-center justify-center gap-1">
-                    <GoSearch fontSize={'20px'} />
+                    <GoSearch fontSize={'20px'} color='var(--grey-1)' />
                     <input type="text" placeholder='Search direct messages' className='searchinput' />
                 </div>
                 <div className="flex column w-100">
@@ -71,7 +71,7 @@ const LeftContent: React.FC = () => {
                                         <div className="image_gradient"></div>
                                     </div>
                                     <div className="flex flex-1 column " style={{ gap: ".1rem" }}>
-                                        <h4 className="fs-16 text-bold flex item-center" style={{ gap: '.2rem' }}>
+                                        <h4 className="fs-16 text-bold text_dark_grey flex item-center" style={{ gap: '.2rem' }}>
                                             {x.profile_name}
                                             <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
                                             <span className="text-light fs-16 text-grey ">@{x.username}</span>
@@ -90,7 +90,7 @@ const LeftContent: React.FC = () => {
 }
 
 const LeftContentStyles = styled.div`
-        flex:0 0 450px;
+        flex:0 0 390px;
         overflow:hidden;
         max-height: 100vh;
         .iconwrapper {
@@ -160,7 +160,7 @@ const LeftContentStyles = styled.div`
 
         .search {
             padding: 1.2rem 2rem;
-            border: 1px solid rgba(0,0,0,.08);
+            border: 1px solid var(--border);
             border-radius: 40px;
             .searchinput {
     background: transparent;
@@ -176,7 +176,8 @@ const LeftContentStyles = styled.div`
         width: 100%;
     padding:1rem 1.5rem;
     &:hover {
-        background-color: #f1f1f1;
+        /* background-color: #f1f1f1; */
+        background-color: var(--dark-grey-hover);
     }
     }
 

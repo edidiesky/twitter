@@ -26,7 +26,7 @@ const list = [
 
     }, {
         title: "Messages",
-        path: '',
+        path: '/conversation',
         icon: <TbMailFilled />
 
     }, {
@@ -90,9 +90,9 @@ const LeftSidebarIndex = () => {
                     </div>
                 </div>
                 <div className="w-85 auto">
-                    <div className="profilewrapper w-100 flex item-center">
+                    <div style={{gap:".5rem"}} className="profilewrapper w-100 flex item-center">
                         <img src="/images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
-                        <h4 className="fs-16 text-bold text-start w-100">
+                        <h4 className="fs-16 text-dark text-bold text-start w-100">
                             {username}
                             <span className="block text-grey text-light fs-16">@edidiesky</span>
                         </h4>
@@ -166,7 +166,8 @@ const LeftSidebarStyles = styled.div`
     font-size: 30px;
   }
   &:hover {
-  background-color: #c7c6c6;
+  /* background-color: #c7c6c6; */
+  background-color: var(--dark-grey-hover);
 }
     }
     .profilewrapper {
@@ -194,13 +195,13 @@ const LeftSidebarStyles = styled.div`
     margin: 0;
    
     &:hover {
-  background-color: #f7f7f7;
+  background-color: var(--dark-grey-hover);
  
   }
   }
   
   &:hover {
-  background-color: #f7f7f7;
+  background-color: var(--dark-grey-hover);
  
   }
   h4 {

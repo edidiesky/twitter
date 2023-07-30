@@ -72,10 +72,10 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                         </div> */}
                     <div className="verfiy_wrapper wrapper2 w-90 auto flex column item-start">
                         <h3 className="text-extra-bold text_dark_grey w-90 auto">
-                            You might like</h3>
+                            Who to follow</h3>
                         <div className="flex column w-100">
                             {
-                                chatData.map((x, index) => {
+                                chatData.slice(0,3).map((x, index) => {
                                     return <div key={index} className="w-100 list flex item-center justify-space">
                                         <div className="flex item-center gap-1">
                                             <div className="image_wrapper">
@@ -97,7 +97,7 @@ const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {
                             }
                         </div>
                     </div>
-                    <div className="flex item-center w-90 auto fs-16 text-light flex-wrap" style={{ gap: ".6rem", paddingBottom: "2rem" }}>
+                    <div className="flex item-center text-dark-grey w-90 auto fs-16 text-light flex-wrap" style={{ gap: "1rem", paddingBottom: "2rem" }}>
                         <h5 className='text-light'>Terms of Service</h5>
                         <h5 className='text-light'>Privacy Policy</h5>
                         <h5 className='text-light'>Cookie Policy</h5>
@@ -120,6 +120,9 @@ const RightSidebarStyles = styled.div`
    top: 0;
     @media (max-width:980px) {
         display: none;
+  }
+  h5 {
+    color: var(--grey-1);
   }
   .feed_participant {
     border: 1px solid rgba(0,0,0,.08);
@@ -197,7 +200,7 @@ const RightSidebarStyles = styled.div`
         }
     }
     h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
     .btn-3 {
         padding: 1rem 2rem;

@@ -14,13 +14,13 @@ const Content: React.FC = () => {
 
 const ContentStyles = styled.div`
         flex:1;
-        border-right : 1px solid rgba(0,0,0,.06);
-        border-left : 1px solid rgba(0,0,0,.06);
+        border-right : 1px solid var(--border);
+        border-left : 1px solid var(--border);
         overflow:auto;
         height: 100vh;
         /* background-color: red; */
         @media (max-width:980px) {
-    border-right : 1px solid rgba(0,0,0,.06);
+    border-right : 1px solid var(--border);
         }
     
   `
