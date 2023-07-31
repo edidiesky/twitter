@@ -10,7 +10,7 @@ export const feedData = [
     favorite_count: 299,
     is_verified: false,
     tweet_image: ['https://pbs.twimg.com/media/F2Syd3RW8AAIzkS?format=webp&name=small'],
-    image: "./images/boris-khentov.jpg",
+    image: "/images/user.jpeg",
     location: "Agodim",
   },
   {
@@ -24,7 +24,7 @@ export const feedData = [
     favorite_count: 749,
     is_verified: true,
     tweet_image: ['https://pbs.twimg.com/media/F1020UVWIAMPGoX?format=webp&name=small'],
-    image: "./images/boris-khentov.jpg",
+    image: "/images/user.jpeg",
     location: "Miskolc",
   },
   {
@@ -37,7 +37,7 @@ export const feedData = [
     retweet_count: 112,
     favorite_count: 541,
     is_verified: true,
-    tweet_image: [], image: "./images/boris-khentov.jpg",
+    tweet_image: [], image: "/images/user.jpeg",
     location: "Lille",
   },
   {
@@ -51,7 +51,7 @@ export const feedData = [
     favorite_count: 390,
     is_verified: false,
     tweet_image: ['https://pbs.twimg.com/media/F2PtJvAXcAAS2Yr?format=webp&name=small'],
-    image: "./images/boris-khentov.jpg",
+    image: "/images/user.jpeg",
     location: "Duanjia",
   },
   {
@@ -64,7 +64,7 @@ export const feedData = [
     favorite_count: 746,
     is_verified: false,
     tweet_image: ['https://pbs.twimg.com/media/F2R4GV2WcAABd8z?format=webp&name=small'],
-    image: "./images/boris-khentov.jpg",
+    image: "/images/user.jpeg",
     location: "Maddela",
   },
   {
@@ -80,7 +80,7 @@ export const feedData = [
     favorite_count: 562,
     is_verified: true,
     tweet_image: ['https://pbs.twimg.com/media/F05WbLRX0AAO1wL?format=jpg&name=small'],
-    image: "./images/boris-khentov.jpg",
+    image: "/images/user.jpeg",
     location: "Rejoagung",
   },
   {
@@ -94,7 +94,7 @@ export const feedData = [
     favorite_count: 56,
     is_verified: false,
     tweet_image: ['https://pbs.twimg.com/media/F1Kw6vnXgAAFsyE?format=jpg&name=small'],
-    image: "./images/boris-khentov.jpg",
+    image: "/images/user.jpeg",
     location: "El Real",
   },
 

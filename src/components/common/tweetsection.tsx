@@ -9,12 +9,12 @@ const TweetFormSection = () => {
         <TweetFormSectionStyles>
             <div className="w-100 flex item-start gap-1">
                 <div className="image_wrapper">
-                    <img src={"/images/raoul-bhavnani.jpg"} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
+                    <img src={"/images/user.jpeg"} alt="tweet_comment_image" className="avatar_profile w-100 h-100" />
                     <div className="image_gradient"></div>
                 </div>
-                <div className="flex flex-1 column gv">
+                <div className="flex flex-1 column gap-1">
                     <div className="area w-100">
-                        <textarea placeholder='Tweet your reply' className="text"></textarea>
+                        <textarea placeholder='Tweet your reply' className="text w-100"></textarea>
                     </div>
                     <div className="flex w-100 item-center justify-space">
                         <div className="flex item-center">
@@ -35,21 +35,22 @@ const TweetFormSection = () => {
 const TweetFormSectionStyles = styled.div`
     width: 100%;
     padding: 1.5rem;
-    border-bottom: 1px solid rgba(0,0,0,.08);
+    border-bottom: 1px solid var(--border);
   font-family: "CustomFont2_light", sans-serif;
 
     .btn-3 {
         background-color: var(--blue-1) !important;
         opacity: .6;
+        padding: .8rem 2rem;
     }
     .area {
         height: 6.5rem;
-    /* border-bottom: 1px solid rgba(0,0,0,.1); */
+    border-bottom: 1px solid var(--border);
 
     }
     .image_wrapper {
-      width:4rem;
-      height:4rem;
+      width:4.5rem;
+      height:4.5rem;
       border-radius:50%;
       cursor:pointer;
       position: relative;
@@ -72,6 +73,7 @@ const TweetFormSectionStyles = styled.div`
       width:100%;
       height:100%;
       border-radius:50%;
+      object-fit: cover;
       /* transform: translateY(-100%); */
       position: absolute;
       
@@ -102,12 +104,12 @@ const TweetFormSectionStyles = styled.div`
         font-family: inherit;
         font-weight: 400;
         background-color: transparent;
-        padding:2rem 1rem ;
+        padding: 1rem ;
         color:var(--dark-1);
         &::placeholder {
-            font-size: 20px;
-  font-family: "CustomFont2_light", sans-serif;
-        color:var(--dark-1);
+            font-size: 24px;
+            font-family: "CustomFont2_light", sans-serif;
+            color:var(--grey-1);
             font-weight: 400;
         }
     }

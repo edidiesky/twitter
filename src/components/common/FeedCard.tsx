@@ -40,7 +40,7 @@ const FeedCard = (props: feedcardtype) => {
             </div>
             <Link prefetch href={`/${props.username}/status/${props.tweet_id}`} className="flex w-90 auto item-start feed_card_wrapper gap-1">
                 <img src={props.image} alt="" className="avatar" />
-                <div className="flex column w-100" style={{ gap: '.3rem' }}>
+                <div className="flex column flex-1" style={{ gap: '.3rem' }}>
                     <h4 className="fs-18 text-dark text-extra-bold flex item-center" style={{ gap: '.2rem' }}>
                         {props.profile_name}
                         <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
@@ -119,8 +119,8 @@ const FeedCardStyles = styled.div`
         transition: all .3s;    
         opacity:0;
         visibility: hidden;
-        @media (max-width:400px) {
-        width: 310px;
+        @media (max-width:500px) {
+        width: 300px;
 
         }
         .dropdown_background {

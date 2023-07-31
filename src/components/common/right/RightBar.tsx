@@ -125,7 +125,7 @@ const RightSidebarStyles = styled.div`
     color: var(--grey-1);
   }
   .feed_participant {
-    border: 1px solid rgba(0,0,0,.08);
+    border: 1px solid var(--border);
     border-radius: 15px;
     padding:1.5rem 2rem;
   }
@@ -133,7 +133,7 @@ const RightSidebarStyles = styled.div`
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 10px;
-    border: 1px solid rgba(0,0,0,.08);
+    border: 1px solid var(--border);
     border-radius: 15px;
     padding:1.5rem 2rem;
 
