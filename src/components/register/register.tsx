@@ -6,9 +6,11 @@ import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link'
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import RegsiterModal from "../modals/RegisterModal";
+import LoginModal from "../modals/LoginModal";
 
 const Regsiters: React.FC = () => {
   const [registermodal, setRegisterModal] = useState(false)
+  const [loginmodal, setLoginModal] = useState(false)
   return (
     <RegsiterStyles style={{ overflow: "hidden" }}>
       <AnimatePresence
@@ -18,6 +20,15 @@ const Regsiters: React.FC = () => {
       >
         {registermodal && <RegsiterModal modal={registermodal}
           setModal={setRegisterModal} />}
+      </AnimatePresence>
+
+      <AnimatePresence
+        initial={"false"}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {loginmodal && <LoginModal modal={loginmodal}
+          setModal={setLoginModal} />}
       </AnimatePresence>
 
       <div className="w-100">
@@ -30,7 +41,7 @@ const Regsiters: React.FC = () => {
             <BsTwitter fontSize={'50px'} color='var(--blue-1)' />
           </Link>
           <div className="flex column gap-3">
-            <h1 className="">Happening now</h1>
+            <h1 className="text-dark">Happening now</h1>
             <h3 className="fs-35 py-2 text-extra-bold">Join Twitter today.</h3>
           </div>
           <div className="flex authWrapper column w-100 gap-1">
@@ -51,7 +62,7 @@ const Regsiters: React.FC = () => {
           </div>
           <div className="flex authWrapper column gap-2">
             <h4 className="fs-20 text-bold">Already have an account?</h4>
-            <div className="authBtn w-100 gap-2 flex fs-16 text-dark item-center">
+            <div onClick={() => setLoginModal(true)}  className="authBtn w-100 gap-2 flex fs-16 text-dark item-center">
               <div className="w-100 text-center">Sign in</div>{" "}
             </div>
           </div>
@@ -95,13 +106,13 @@ const RegsiterStyles = styled.div`
     opacity:1 !important;
   }
   .authBtn {
-    border: 1px solid rgba(0, 0, 0, .08);
+    border: 1px solid var(--border);
     padding: .9rem 4rem;
     border-radius: 40px;
     width: 100%;
     cursor: pointer;
     &:hover {
-        background-color: rgb(241, 250, 255);
+      background-color: var(--dark-grey-hover) !important;
     }
   }
   .option {
