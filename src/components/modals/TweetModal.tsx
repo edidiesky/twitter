@@ -11,10 +11,11 @@ type SetStateProp<T> = React.Dispatch<React.SetStateAction<T>>
 
 type modalType = {
   modal?: Boolean;
+  type?: string;
   setModal: SetStateProp<Boolean>;
 }
 
-const TweetModal: React.FC<modalType> = ({ modal, setModal }) => {
+const TweetModal: React.FC<modalType> = ({ modal, setModal, type }) => {
 
   return (
     <TweetModalStyles
@@ -140,7 +141,7 @@ const TweetModalStyles = styleds(motion.div)`
   }
  
   .backdrop {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.3);
 
     position: absolute;
     height: 100%;
@@ -150,9 +151,9 @@ const TweetModalStyles = styleds(motion.div)`
     width: clamp(45%, 150px, 100%);
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: var(--white);
     border-radius: 14px;
-    box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.03);
+    box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.3);
     position: relative;
     padding:1rem 0;
     margin-top:2rem;

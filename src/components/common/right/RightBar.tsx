@@ -118,9 +118,15 @@ const RightSidebarStyles = styled.div`
    min-height: 100vh;
    position: sticky;
    top: 0;
+   @media (max-width:1080px) {
+        flex: .6;
+    }
     @media (max-width:980px) {
+        flex: .26;
+    }
+    @media (max-width:780px) {
         display: none;
-  }
+    }
   h5 {
     color: var(--grey-1);
   }
@@ -197,6 +203,9 @@ const RightSidebarStyles = styled.div`
 
         @media (max-width:1080px) {
             width: 95%;
+        }
+        @media (max-width:980px) {
+            display: none;
         }
     }
     h3 {

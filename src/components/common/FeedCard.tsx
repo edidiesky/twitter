@@ -46,7 +46,7 @@ const FeedCard = (props: feedcardtype) => {
                         <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
                         <span className="text-light fs-16 text-grey ">@{props.username}</span>
                     </h4>
-                    <h5 style={{ paddingBottom: "1rem", fontSize:"1.5rem" }} className="text_dark_grey text-light family1">
+                    <h5 style={{ paddingBottom: "1rem"}} className="text_dark_grey text-light family1">
                         {props.tweet_text}
                     </h5>
                     <div className="w-100 wrapper">
@@ -101,9 +101,12 @@ const FeedCardStyles = styled.div`
         background-color: var(--dark-grey-hover);
     }
     h5 {
-        @media (max-width:780px) {
+        @media (max-width:980px) {
+        font-size: 15.5px !important;
+       }
+       @media (max-width:580px) {
         font-size: 14px !important;
-    }
+       }
     }
     .dropdownCard {
         position: absolute;
@@ -262,7 +265,7 @@ li {
         font-weight: 300;
         line-height: 20px;
         @media (max-width:780px) {
-            font-size: 14px;
+            font-size: 15px;
         }
     }
   `

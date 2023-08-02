@@ -2,6 +2,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BsImages, BsEmojiSmile } from 'react-icons/bs'
+import TwitterIcon from '@/assets/svg/twitter';
+import MediaIcon from '@/assets/svg/media';
+import ScheduleIcon from '@/assets/svg/schedule';
+import PollIcon from '@/assets/svg/poll';
 
 const TweetFormSection = () => {
 
@@ -19,9 +23,18 @@ const TweetFormSection = () => {
                     <div className="flex w-100 item-center justify-space">
                         <div className="flex item-center">
                             <div className="icons flex item-center justify-center">
-                                <BsImages fontSize={'18px'} />
+                                <MediaIcon />
                             </div> <div className="icons flex item-center justify-center">
-                                <BsEmojiSmile fontSize={'18px'} />
+                                <TwitterIcon />
+                            </div>
+                            <div className="icons flex item-center justify-center">
+                                <ScheduleIcon />
+                            </div>
+                            <div className="icons flex item-center justify-center">
+                                <PollIcon />
+                            </div>
+                            <div className="icons flex item-center justify-center">
+                                <TwitterIcon />
                             </div>
                         </div>
                         <div className="btn btn-3 fs-14 text-extra-bold text-white">Reply</div>
@@ -80,8 +93,8 @@ const TweetFormSectionStyles = styled.div`
     }
     }
     .icons {
-        width: 4rem;
-        height: 4rem;
+        width: 3.5rem;
+        height: 3.5rem;
         border-radius: 50%;
         transition: all .5s;
 

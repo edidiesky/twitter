@@ -1,33 +1,36 @@
 import { BsTwitter } from 'react-icons/bs'
-import { RiHome7Fill } from 'react-icons/ri'
-import { GoSearch } from 'react-icons/go'
-import { IoNotificationsOutline } from 'react-icons/io5'
 import { CiCircleMore } from 'react-icons/ci'
 import { BiSolidUser } from 'react-icons/bi'
 import { TbMailFilled } from 'react-icons/tb'
 
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link'
 import ActiveLink from './activelink'
+import TweetModal from '../modals/TweetModal'
+import { AnimatePresence } from 'framer-motion'
+import SearchIcon from '@/assets/svg/leftsidebaricons/search'
+import HomeIcon from '@/assets/svg/leftsidebaricons/home'
+import NotificationIcon from '@/assets/svg/leftsidebaricons/notification'
+import MessageIcon from '@/assets/svg/leftsidebaricons/message';
 const list = [
     {
         title: "Home",
         path: '/',
-        icon: <RiHome7Fill />
+        icon: <HomeIcon />
     }, {
         title: "Explore",
         path: '/explore',
-        icon: <GoSearch />
+        icon: <SearchIcon />
     }, {
         title: "Notifications",
         path: '',
-        icon: <IoNotificationsOutline />
+        icon: <NotificationIcon />
 
     }, {
         title: "Messages",
         path: '/conversation',
-        icon: <TbMailFilled />
+        icon: <MessageIcon />
 
     }, {
         title: "Lists",
@@ -61,46 +64,59 @@ const list = [
 
 const LeftSidebarIndex = () => {
     const username = 'Edidie tried Coding'
+    const [tweet, setTweet] = useState(false)
     return (
-        <LeftSidebarStyles>
-            <div className="flex column justify-space wrapper auto gap-1">
-                <div className="leftTop flex column">
-                    <div className="flex w-100 column">
-                        <div className="flex top w-100">
-                            <Link href={'/'} className="icon flex item-center justify-center">
-                                <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
-                            </Link>
+        <>
+            <AnimatePresence
+                initial="false"
+                exitBeforeEnter={true}
+                onExitComplete={() => null}
+            >
+                {tweet && <TweetModal modal={tweet} setModal={setTweet} />}
+            </AnimatePresence>
+            <LeftSidebarStyles>
+
+
+                <div className="flex column justify-space wrapper auto gap-1">
+                    <div className="leftTop flex column">
+                        <div className="flex w-100 column">
+                            <div className="flex top w-100">
+                                <Link href={'/'} className="icon flex item-center justify-center">
+                                    <BsTwitter fontSize={'30px'} color='var(--blue-1)' />
+                                </Link>
+                            </div>
+                            <ul className="flex column item-start">
+                                {
+                                    list.map((x, index) => {
+                                        return (
+                                            <li className="list text-dark flex item-center gap-2 text-light" >
+                                                <ActiveLink hrefs={x.path}>
+                                                    {x.icon}
+                                                    <span className='span'>{x.title}</span>
+                                                </ActiveLink>
+                                            </li>
+                                        )
+
+                                    })
+                                }
+                            </ul>
+                            <div onClick={() => setTweet(true)} className="btn fs-16 text-white text-bold">Tweet</div>
                         </div>
-                        <ul className="flex column item-start">
-                            {
-                                list.map((x, index) => {
-                                    return (
-                                        <li className="list text-dark flex item-center gap-2 text-light" >
-                                            <ActiveLink hrefs={x.path}>
-                                                {x.icon}
-                                                <span className='span'>{x.title}</span>
-                                            </ActiveLink>
-                                        </li>
-                                    )
-
-                                })
-                            }
-                        </ul>
-                        <div className="btn fs-16 text-white text-bold">Tweet</div>
+                    </div>
+                    <div className="w-85 auto">
+                        <div style={{ gap: ".5rem" }} className="profilewrapper w-100 flex item-center">
+                            <img src="/images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
+                            <h4 className="fs-16 text-dark text-bold text-start w-100">
+                                {username}
+                                <span className="block text-grey text-light fs-16">@edidiesky</span>
+                            </h4>
+                        </div>
                     </div>
                 </div>
-                <div className="w-85 auto">
-                    <div style={{ gap: ".5rem" }} className="profilewrapper w-100 flex item-center">
-                        <img src="/images/johanna-richardson.jpg" alt="images-avatar" className="avatar" />
-                        <h4 className="fs-16 text-dark text-bold text-start w-100">
-                            {username}
-                            <span className="block text-grey text-light fs-16">@edidiesky</span>
-                        </h4>
-                    </div>
-                </div>
-            </div>
 
-        </LeftSidebarStyles>
+            </LeftSidebarStyles>
+        </>
+
     )
 }
 
@@ -110,9 +126,15 @@ const LeftSidebarStyles = styled.div`
    position: sticky;
    top: 0;
     /* overflow: hidden; */
-    @media (max-width:780px) {
-        flex: 0 0 80px;
+    @media (max-width:1080px) {
+        flex: 0 0 110px;
 
+  }
+  @media (max-width:980px) {
+        flex: 0 0 200px;
+  }
+  @media (max-width:780px) {
+        flex: 0 0 80px;
   }
     @media (max-width:480px) {
         display: none;

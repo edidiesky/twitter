@@ -1,1 +1,5 @@
 Guys for u to use import statemtnt in next and typescript you have to name your files as .mjs and import tyh type:module in your package.json
+
+1. Z=index faults
+
+a div is located in the parents always inherit the z-index of teh parent element
