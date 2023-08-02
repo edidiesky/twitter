@@ -124,7 +124,11 @@ const RightSidebarStyles = styled.div`
     @media (max-width:980px) {
         flex: .26;
     }
+    
     @media (max-width:780px) {
+        flex: .1;
+    }
+    @media (max-width:680px) {
         display: none;
     }
   h5 {

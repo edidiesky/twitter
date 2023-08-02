@@ -1,7 +1,5 @@
 import { BsTwitter } from 'react-icons/bs'
 import { CiCircleMore } from 'react-icons/ci'
-import { BiSolidUser } from 'react-icons/bi'
-import { TbMailFilled } from 'react-icons/tb'
 
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -13,6 +11,10 @@ import SearchIcon from '@/assets/svg/leftsidebaricons/search'
 import HomeIcon from '@/assets/svg/leftsidebaricons/home'
 import NotificationIcon from '@/assets/svg/leftsidebaricons/notification'
 import MessageIcon from '@/assets/svg/leftsidebaricons/message';
+import ListIcon from '@/assets/svg/leftsidebaricons/list';
+import CommunitiesIcon from '@/assets/svg/leftsidebaricons/communities';
+import BadgeIcon from '@/assets/svg/leftsidebaricons/badge';
+import ProfileIcon from '@/assets/svg/leftsidebaricons/profile';
 const list = [
     {
         title: "Home",
@@ -35,27 +37,27 @@ const list = [
     }, {
         title: "Lists",
         path: '',
-        icon: <BiSolidUser />
+        icon: <ListIcon />
 
     },
     {
         title: "Communities",
         path: '',
-        icon: <CiCircleMore />
+        icon: <CommunitiesIcon />
 
     }, {
         title: "Verified",
         path: '',
-        icon: <BiSolidUser />
+        icon: <BadgeIcon />
 
     },
     {
         title: "Profile    ",
         path: '/edidie',
-        icon: <CiCircleMore />
+        icon: <ProfileIcon />
 
     }, {
-        title: "More    ",
+        title: "More",
         path: '',
         icon: <CiCircleMore />
 
@@ -136,6 +138,9 @@ const LeftSidebarStyles = styled.div`
   @media (max-width:780px) {
         flex: 0 0 80px;
   }
+  @media (max-width:580px) {
+        flex: 0 0 60px;
+  }
     @media (max-width:480px) {
         display: none;
   }
@@ -184,9 +189,9 @@ const LeftSidebarStyles = styled.div`
     }
   }
   @media (max-width:980px) {
-    width:7rem;
+    width:6.5rem;
     justify-content: center;
-    height:7rem;
+    height:6.5rem;
   }
   svg {
     font-size: 30px;
@@ -252,6 +257,6 @@ const LeftSidebarStyles = styled.div`
    padding-left: 2rem;
     position:relative;
     }
-  `
+`
 
 export default LeftSidebarIndex
