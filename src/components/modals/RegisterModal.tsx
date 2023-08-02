@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { slideUp } from "../utils/framer";
 import { RxCross2 } from 'react-icons/rx'
 import FormInput from "../form/input";
+import Message from "../loaders/Message";
 
 type SetStateProp<T> = React.Dispatch<React.SetStateAction<T>>
 
@@ -83,19 +84,22 @@ const RegsiterModal: React.FC<modalType> = ({ modal, setModal }) => {
             </div>
             <div className="btn w-85 auto btn-1 fs-16 text-white text-extra-bold">Next
             </div>
-          </div> : <div className="center_content h-100 justify-space w-85 py-2 auto flex column">
-
+          </div> : <div className="center_content h-100 justify-space w-85 py-2 auto flex gap-1 column">
+            <div className="hidden w-85 auto">
+              <div className="w-85 auto"><Message showAlert={false} alertText={'Hello Hi are u fine'} /></div>
+            </div>
             <div className="w-85 formwraper auto flex column gap-3">
+
               <h4 className="fs-30 text-dark text-extra-bold">Create your account</h4>
               <div className="flex w-100 column" style={{ gap: "10px" }}>
                 <FormInput state={name} label={'Name'} setState={setName} />
                 <FormInput state={email} label={'Email'} setState={setEmail} />
                 <FormInput state={password} label={'Password'} setState={setPassword} />
-                <div className="flex column gap-1">
+                {/* <div className="flex column gap-1">
                   <h5 className="fs-16 py-2 text-extra-bold">  Date of birth
                     <span className="text-light py-1 block text-grey">This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</span>
                   </h5>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="btn w-85 auto btn-1 fs-16 text-white text-extra-bold">Next
@@ -126,8 +130,9 @@ const RegisterModalStyles = styled(motion.div)`
   }
   .btn.btn-1 {
     padding:1.6rem 2rem !important;
+    margin-top: 4rem;
     &:hover {
-      background-color: var(--dark-grey-hover) !important;
+      opacity:.5;
     }
   }
   .label {
@@ -254,7 +259,7 @@ const RegisterModalStyles = styled(motion.div)`
     }
   }
   .backdrop {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.5);
 
     position: absolute;
     height: 100%;
@@ -289,6 +294,10 @@ const RegisterModalStyles = styled(motion.div)`
     }
     @media (max-width:580px) {
       width: 90%;
+    }
+    @media (max-width:580px) {
+    min-height: 100vh;
+      width: 100%;
     }
 
   }

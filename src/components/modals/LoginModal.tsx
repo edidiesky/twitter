@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { slideUp } from "../utils/framer";
 import { RxCross2 } from 'react-icons/rx'
 import FormInput from "../form/input";
+import Message from "../loaders/Message";
 
 type SetStateProp<T> = React.Dispatch<React.SetStateAction<T>>
 
@@ -85,8 +86,11 @@ const LoginModal: React.FC<modalType> = ({ modal, setModal }) => {
             </div>
             <div className="btn w-85 auto btn-1 fs-16 text-white text-extra-bold">Next
             </div>
-          </div> : <div className="center_content h-100 justify-space w-85 py-2 auto flex column">
-
+          </div> : <div className="center_content h-100 justify-space w-85 py-2 auto flex column gap-1">
+            <div style={{width:"70%"}} className="hidden w-85 auto">
+              <div className="w-85 auto">
+                <Message showAlert={false} alertText={'Hello Hi are u fine'} /></div>
+            </div>
             <div className="w-85 formwraper auto flex column gap-3">
               <h4 className="fs-35 text-dark text-center text-light">Sign in to Twitter</h4>
               <div className="flex w-100 column" style={{ gap: "10px" }}>
@@ -241,8 +245,8 @@ const RegisterModalStyles = styled(motion.div)`
     }
   }
   .backdrop {
-    /* background: rgba(0, 0, 0, 0.7); */
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.7);
+
     position: absolute;
     height: 100%;
     width: 100%;

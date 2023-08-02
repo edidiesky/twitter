@@ -8,7 +8,6 @@ const InputTextField = styled(TextField)(({ theme }) => ({
     backgroundColor: 'var(--grey-2)',
     border: '1px solid rgba(0,0,0,.1)',
     fontFamily: 'CustomFont2_light, sans-serif',
-    transitino: "all .4s",
 
     '& fieldset': {
       borderColor: 'transparent',
