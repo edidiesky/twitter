@@ -46,7 +46,7 @@ const FeedCard = (props: feedcardtype) => {
                         <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
                         <span className="text-light fs-16 text-grey ">@{props.username}</span>
                     </h4>
-                    <h5 style={{ paddingBottom: "1rem" }} className="text_dark_grey text-light family1 fs-14">
+                    <h5 style={{ paddingBottom: "1rem", fontSize:"1.5rem" }} className="text_dark_grey text-light family1">
                         {props.tweet_text}
                     </h5>
                     <div className="w-100 wrapper">
@@ -216,7 +216,7 @@ li {
     .iconwrapper {
         transition: all .5s;
         cursor: pointer;
-        color:var(--dark-1);
+        color:var(--grey-1);
         &:hover {
             color:rgba(29, 156, 240, 0.835) ;
             &.text-3 {

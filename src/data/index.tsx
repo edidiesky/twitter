@@ -79,7 +79,7 @@ export const feedData = [
     retweet_count: 464,
     favorite_count: 562,
     is_verified: true,
-    tweet_image: ['https://pbs.twimg.com/media/F05WbLRX0AAO1wL?format=jpg&name=small'],
+    tweet_image: ['https://pbs.twimg.com/media/F2gm_ZMXEAIUVjh?format=webp&name=small'],
     image: "/images/user.jpeg",
     location: "Rejoagung",
   },
@@ -88,15 +88,14 @@ export const feedData = [
     user_id: 6,
     profile_name: "The champion",
     username: "amadgewick5",
-    tweet_text: 'The National Drug Law Enforcement Agency has arrested a teenage student, Benjamin Nnamani Daberechi, 19, with Methamphetamine drugs concealed inside crayfish.',
+    tweet_text: `X will soon pay creators THE MOST out of any platform.\n\nBut growing on X is still very time consuming, most creators will miss out.\n\nBookmark these ChatGPT Prompt Engineering templates to gain a massive advantage on X. 🧵👇`,
     timestamp: "10/24/2022",
     retweet_count: 818,
     favorite_count: 56,
     is_verified: false,
-    tweet_image: ['https://pbs.twimg.com/media/F1Kw6vnXgAAFsyE?format=jpg&name=small'],
+    tweet_image: ['https://pbs.twimg.com/media/F2dRzjjWcAASKKn?format=webp&name=small'],
     image: "/images/user.jpeg",
     location: "El Real",
-  },
-
+  }
 
 ];

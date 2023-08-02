@@ -8,6 +8,7 @@ const InputTextField = styled(TextField)(({ theme }) => ({
     backgroundColor: 'var(--grey-2)',
     border: '1px solid rgba(0,0,0,.1)',
     fontFamily: 'CustomFont2_light, sans-serif',
+    transitino: "all .4s",
 
     '& fieldset': {
       borderColor: 'transparent',
@@ -18,13 +19,16 @@ const InputTextField = styled(TextField)(({ theme }) => ({
     '&.Mui-focused fieldset': {
       borderColor: 'transparent',
     },
+    '&.Mui-focused ': {
+      border: '2px solid var(--blue-1)',
+    },
   },
   '& .MuiOutlinedInput-input': {
     padding: '20px 10px',
     fontSize: '14px',
     fontWeight: '400',
     fontFamily: 'CustomFont2_light, sans-serif',
-    color:"var(--dark-1)"
+    color: "var(--dark-1)"
 
   },
   '& .MuiInputLabel-root': {
@@ -37,8 +41,8 @@ const InputTextField = styled(TextField)(({ theme }) => ({
     fontWeight: '400',
   },
   '& .MuiInputLabel-shrink': {
-    transform: 'translate(12px, 2px) scale(0.85)',
-    color: 'var(--blue-1)',
+    transform: 'translate(12px, 6px) scale(0.75)',
+    color: 'var(--blue-1)', fontWeight: "normal"
   },
 }));
 
