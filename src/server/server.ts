@@ -1,9 +1,11 @@
 import express from "express";
+import path from "path";
 import dotenv from "dotenv";
+
 dotenv.config();
+
 const app = express();
-console.log('Hello')
-// import { errorHandler, NotFound } from "./middleware/error-handler.js";
+import { errorHandler, NotFound } from "./middleware/error-handler.js";
 
 import mongoose from "mongoose";
 
@@ -12,22 +14,23 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
+// routes
+import usertweetRoute from "./routes/userTweetRoute.js";
 
-// app.use("/api/v1/chat", chatRoute);
+
+// routes
+app.use("/api/v1/tweet", usertweetRoute);
 
 // console.log((path.join(__dirname, '/public/uploads')))
-
-// mongoose.connect(
-//     process.env.MONGO_URl,
-//     {
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//     },
-//     () => {
-//         console.log("mongo has been connected");
-//     }
-// );
-
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }).then(() => {
+    console.log("mongo has been connected");
+  }).catch((err) => {
+    console.error("Error connecting to MongoDB:", err);
+  });
+  
 
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static(path.join(__dirname, "../frontend/dist")));
@@ -42,8 +45,8 @@ app.use(express.json());
 // }
 
 // Middlewares
-// app.use(NotFound);
-// app.use(errorHandler);
+app.use(NotFound);
+app.use(errorHandler);
 
 app.listen(5000, () => {
     console.log("server is listening on port 4000");
