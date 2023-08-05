@@ -1,7 +1,7 @@
 export const feedData = [
   {
     tweet_id: 15,
-    user_id: 15,
+    tweet_user_id: 15,
     profile_name: "The champion",
     username: "mhasnneye",
     tweet_text: '50 ChatGPT prompts that will grow your business and save you hours of work [Bookmark for later] 1. Create a Social Media Content Plan',
@@ -15,7 +15,7 @@ export const feedData = [
   },
   {
     tweet_id: 1,
-    user_id: 1,
+    tweet_user_id: 1,
     profile_name: "Techno Mobile Nigeria",
     username: "TECNOMobileNG",
     tweet_text: 'CAMON 20 Series offer Alert!  Buy the CAMON 20 Premier 5G, CAMON 20 Pro 5G or the CAMON 20 Pro in our stores, & pay later with 0% interest.  Scan the QR code or visit any of our recommended retail stores to get started.  #CAMON20Series #EveryEmotionInMotion #CAMON20Premier',
@@ -29,7 +29,7 @@ export const feedData = [
   },
   {
     tweet_id: 2,
-    user_id: 2,
+    tweet_user_id: 2,
     profile_name: "The champion",
     username: "imougenel1",
     tweet_text: "Hello world",
@@ -42,7 +42,7 @@ export const feedData = [
   },
   {
     tweet_id: 3,
-    user_id: 3,
+    tweet_user_id: 3,
     profile_name: "The champion",
     username: "dgors2",
     tweet_text: "Powerful! 🙌",
@@ -56,7 +56,7 @@ export const feedData = [
   },
   {
     tweet_id: 4,
-    user_id: 4,
+    tweet_user_id: 4,
     profile_name: "The champion",
     username: "tcattermull3",
     tweet_text:"18-year-old Linda Caicedo couldn't believe she scored that either 😱",  timestamp: "05/05/2022",
@@ -69,7 +69,7 @@ export const feedData = [
   },
   {
     tweet_id: 5,
-    user_id: 5,
+    tweet_user_id: 5,
     profile_name: "The champion",
     username: "aalvarado4",
     tweet_text:
@@ -85,7 +85,7 @@ export const feedData = [
   },
   {
     tweet_id: 6,
-    user_id: 6,
+    tweet_user_id: 6,
     profile_name: "The champion",
     username: "amadgewick5",
     tweet_text: `X will soon pay creators THE MOST out of any platform.\n\nBut growing on X is still very time consuming, most creators will miss out.\n\nBookmark these ChatGPT Prompt Engineering templates to gain a massive advantage on X. 🧵👇`,
