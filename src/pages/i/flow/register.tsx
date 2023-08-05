@@ -1,4 +1,4 @@
-import Regsiters from '@/components/register/register'
+import Regsiters from 'components/register/register'
 import Head from 'next/head'
 export default function Register() {
   return (

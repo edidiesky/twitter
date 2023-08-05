@@ -40,9 +40,9 @@ const Regsiters: React.FC = () => {
           <Link href={'/'} className="icon flex item-center justify-center">
             <BsTwitter fontSize={'50px'} color='var(--blue-1)' />
           </Link>
-          <div className="flex column gap-3">
+          <div className="flex column gap-2">
             <h1 className="text-dark">Happening now</h1>
-            <h3 className="fs-35 py-2 text-extra-bold">Join Twitter today.</h3>
+            <h3 className="fs-35 py-1 text-extra-bold">Join Twitter today.</h3>
           </div>
           <div className="flex authWrapper column w-100 gap-1">
             <div className="flex w-100 column gap-1 item-start">
@@ -62,7 +62,7 @@ const Regsiters: React.FC = () => {
           </div>
           <div className="flex authWrapper column gap-2">
             <h4 className="fs-20 text-bold">Already have an account?</h4>
-            <div onClick={() => setLoginModal(true)}  className="authBtn w-100 gap-2 flex fs-16 text-dark item-center">
+            <div onClick={() => setLoginModal(true)} className="authBtn w-100 gap-2 flex fs-16 text-dark item-center">
               <div className="w-100 text-center">Sign in</div>{" "}
             </div>
           </div>
@@ -86,6 +86,11 @@ const RegsiterStyles = styled.div`
     justify-content: space-around;
     padding: 2rem 0;
   }
+  h3 {
+    @media (max-width:480px) {
+    font-size: 30px;
+    }
+  }
   
   h1 {
     font-size: 60px;
@@ -93,6 +98,12 @@ const RegsiterStyles = styled.div`
     @media (max-width:1080px) {
     font-size: 50px;
   }
+    @media (max-width:580px) {
+    font-size: 40px;
+    }
+    @media (max-width:380px) {
+    font-size: 35px;
+    }
   }
   .authWrapper {
     width: 55%;

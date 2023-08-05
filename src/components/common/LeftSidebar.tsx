@@ -7,14 +7,14 @@ import Link from 'next/link'
 import ActiveLink from './activelink'
 import TweetModal from '../modals/TweetModal'
 import { AnimatePresence } from 'framer-motion'
-import SearchIcon from '@/assets/svg/leftsidebaricons/search'
-import HomeIcon from '@/assets/svg/leftsidebaricons/home'
-import NotificationIcon from '@/assets/svg/leftsidebaricons/notification'
-import MessageIcon from '@/assets/svg/leftsidebaricons/message';
-import ListIcon from '@/assets/svg/leftsidebaricons/list';
-import CommunitiesIcon from '@/assets/svg/leftsidebaricons/communities';
-import BadgeIcon from '@/assets/svg/leftsidebaricons/badge';
-import ProfileIcon from '@/assets/svg/leftsidebaricons/profile';
+import SearchIcon from 'assets/svg/leftsidebaricons/search'
+import HomeIcon from 'assets/svg/leftsidebaricons/home'
+import NotificationIcon from 'assets/svg/leftsidebaricons/notification'
+import MessageIcon from 'assets/svg/leftsidebaricons/message';
+import ListIcon from 'assets/svg/leftsidebaricons/list';
+import CommunitiesIcon from 'assets/svg/leftsidebaricons/communities';
+import BadgeIcon from 'assets/svg/leftsidebaricons/badge';
+import ProfileIcon from 'assets/svg/leftsidebaricons/profile';
 const list = [
     {
         title: "Home",

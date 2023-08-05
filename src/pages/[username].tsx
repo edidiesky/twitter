@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Profile from "@/components/profile/profile";
+import Profile from "components/profile/profile";
 
 export default function UserProfile() {
   const router = useRouter();
