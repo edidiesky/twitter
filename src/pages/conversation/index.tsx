@@ -1,4 +1,4 @@
-import Message from '@/components/messages/message'
+import Message from 'components/messages/message'
 import Head from 'next/head'
 export default function Messages() {
   return (

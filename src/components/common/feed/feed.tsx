@@ -1,6 +1,6 @@
-import FeedCard from '@/components/common/FeedCard';
-import { feedData } from '@/data';
-import { feedcardtype } from '@/types/feedtype';
+import FeedCard from 'components/common/FeedCard';
+import { feedData } from 'data';
+import { feedcardtype } from 'types/feedtype';
 import React from 'react';
 import styled from 'styled-components';
 

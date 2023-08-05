@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Connect from '@/components/connect/connect'
+import Connect from 'components/connect/connect'
 export default function Home() {
   return (
     <div>

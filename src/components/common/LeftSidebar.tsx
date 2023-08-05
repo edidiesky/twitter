@@ -7,14 +7,14 @@ import Link from 'next/link'
 import ActiveLink from './activelink'
 import TweetModal from '../modals/TweetModal'
 import { AnimatePresence } from 'framer-motion'
-import SearchIcon from '@/assets/svg/leftsidebaricons/search'
-import HomeIcon from '@/assets/svg/leftsidebaricons/home'
-import NotificationIcon from '@/assets/svg/leftsidebaricons/notification'
-import MessageIcon from '@/assets/svg/leftsidebaricons/message';
-import ListIcon from '@/assets/svg/leftsidebaricons/list';
-import CommunitiesIcon from '@/assets/svg/leftsidebaricons/communities';
-import BadgeIcon from '@/assets/svg/leftsidebaricons/badge';
-import ProfileIcon from '@/assets/svg/leftsidebaricons/profile';
+import SearchIcon from 'assets/svg/leftsidebaricons/search'
+import HomeIcon from 'assets/svg/leftsidebaricons/home'
+import NotificationIcon from 'assets/svg/leftsidebaricons/notification'
+import MessageIcon from 'assets/svg/leftsidebaricons/message';
+import ListIcon from 'assets/svg/leftsidebaricons/list';
+import CommunitiesIcon from 'assets/svg/leftsidebaricons/communities';
+import BadgeIcon from 'assets/svg/leftsidebaricons/badge';
+import ProfileIcon from 'assets/svg/leftsidebaricons/profile';
 const list = [
     {
         title: "Home",
@@ -102,7 +102,7 @@ const LeftSidebarIndex = () => {
                                     })
                                 }
                             </ul>
-                            <div onClick={() => setTweet(true)} className="btn fs-16 text-white text-bold">Tweet</div>
+                            <div onClick={() => setTweet(true)} className="btn fs-18 text-white text-bold">Tweet</div>
                         </div>
                     </div>
                     <div className="w-85 auto">
@@ -173,7 +173,7 @@ const LeftSidebarStyles = styled.div`
         border-radius: 40px;
   text-align: center;
   padding: 1rem 2rem;
-  font-size: 20px;
+  font-size: 21px;
   @media (max-width:1180px) {
     align-items: flex-end;
     justify-content: flex-end;

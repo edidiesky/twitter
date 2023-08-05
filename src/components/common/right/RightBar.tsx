@@ -4,7 +4,7 @@ import { BiSolidBadgeCheck, BiBarChart, BiDotsHorizontalRounded } from 'react-ic
 import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
 import { LiaRetweetSolid } from 'react-icons/lia'
 import Search from './Search';
-import { chatData } from '@/data/chatData';
+import { chatData } from 'data/chatData';
 type Rightbar = {
     types?: String
 }

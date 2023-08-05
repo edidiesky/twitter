@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import PostDetails from "@/components/feeddetail/details";
+import PostDetails from "components/feeddetail/details";
 
 export default function UserProfile() {
   const router = useRouter();

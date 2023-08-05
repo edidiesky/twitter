@@ -2,10 +2,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BsImages, BsEmojiSmile } from 'react-icons/bs'
-import TwitterIcon from '@/assets/svg/twitter';
-import MediaIcon from '@/assets/svg/media';
-import ScheduleIcon from '@/assets/svg/schedule';
-import PollIcon from '@/assets/svg/poll';
+import TwitterIcon from 'assets/svg/twitter';
+import MediaIcon from 'assets/svg/media';
+import ScheduleIcon from 'assets/svg/schedule';
+import PollIcon from 'assets/svg/poll';
 
 const TweetFormSection = () => {
 

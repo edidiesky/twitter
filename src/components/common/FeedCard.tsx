@@ -1,13 +1,14 @@
-import { feedcardtype } from '@/types/feedtype';
+import { feedcardtype } from 'types/feedtype';
 import { AnimatePresence } from 'framer-motion';
-import { LiaRetweetSolid } from 'react-icons/lia'
-import { AiOutlineHeart } from 'react-icons/ai'
 import { BiSolidBadgeCheck, BiBarChart, BiDotsHorizontalRounded } from 'react-icons/bi'
-import { HiOutlineChatBubbleOvalLeft } from 'react-icons/hi2'
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import TweetModal from '../modals/TweetModal';
+import RetweetIcon from 'assets/svg/feedcardicons/retweet';
+import LikeIcon from 'assets/svg/feedcardicons/like';
+import StatIcon from 'assets/svg/feedcardicons/stat';
+import MessageIcon from 'assets/svg/feedcardicons/message';
 
 const FeedCard = (props: feedcardtype) => {
     const [tweet, setTweet] = useState(false)
@@ -46,7 +47,7 @@ const FeedCard = (props: feedcardtype) => {
                         <span className='flex item-center'><BiSolidBadgeCheck color={'var(--blue-1)'} /></span>
                         <span className="text-light fs-16 text-grey ">@{props.username}</span>
                     </h4>
-                    <h5 style={{ paddingBottom: "1rem"}} className="text_dark_grey text-light family1">
+                    <h5 style={{ paddingBottom: "1rem" }} className="text_dark_grey text-light family1">
                         {props.tweet_text}
                     </h5>
                     <div className="w-100 wrapper">
@@ -60,27 +61,27 @@ const FeedCard = (props: feedcardtype) => {
                 </div>
             </Link>
             <div className="flex item-center w-85 auto gap-2">
-                <div className="flex item-center w-85 auto gap-2">
+                <div style={{ marginTop: ".6rem" }} className="flex item-center w-85 auto gap-2">
                     <div className="flex w-100 item-center fs-14 text-light feedtags_wrapper">
                         <div onClick={() => setTweet(true)} className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon1 flex item-center justify-center">
-                                <HiOutlineChatBubbleOvalLeft />
+                                <MessageIcon />
                             </div>
                             23
                         </div>
                         <div className="flex iconwrapper text_2 item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon2 flex item-center justify-center">
-                                <LiaRetweetSolid fontSize={'24px'} />
+                                <RetweetIcon fontSize={'24px'} />
                             </div>
                             144
                         </div><div className="flex iconwrapper text-3 item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon3 flex item-center justify-center">
-                                <AiOutlineHeart />
+                                <LikeIcon />
                             </div>
                             23
                         </div><div className="flex iconwrapper item-center" style={{ gap: ".3rem" }}>
                             <div className="icons icon1 flex item-center justify-center">
-                                <BiBarChart />
+                                <StatIcon />
                             </div>
                             123
                         </div>
