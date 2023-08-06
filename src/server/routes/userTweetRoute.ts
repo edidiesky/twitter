@@ -3,7 +3,7 @@ const router = express.Router();
 import {
   adminMiddleware,
   authMiddleware,
-} from "../middleware/authentication.js";
+} from "../middleware/authentication";
 import {
   GetTopRatedTweet,
   CreateTweet,
@@ -11,7 +11,7 @@ import {
   UpdateTweet,
   GetAllTweet,
   GetSingleTweet,
-} from "../controllers/userTweetControllers.js";
+} from "../controllers/userTweetControllers";
 
 router.get("/", authMiddleware, GetAllTweet);
 router.post("/", authMiddleware, CreateTweet);
