@@ -16,15 +16,19 @@ app.use(express.json());
 
 // routes
 import usertweetRoute from "./routes/userTweetRoute";
+import userRoute from "./routes/userRoute";
+import authRoute from "./routes/authRoute";
 
 
 // routes
 app.use("/api/v1/tweet", usertweetRoute);
+app.use("/api/v1/user", userRoute);
+app.use("/api/v1/auth", authRoute);
 
 
 const mongoUrl = process.env.MONGO_URL;
 if (!mongoUrl) {
-  throw new Error('MongoDB connection string (MONGO_URL) is not defined.');
+  throw new Error('MongoDB connection string is not defined.');
 }
 
 mongoose.connect(mongoUrl);

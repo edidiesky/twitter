@@ -5,7 +5,6 @@ import {
   authMiddleware,
 } from "../middleware/authentication";
 import {
-  GetTopRatedTweet,
   CreateTweet,
   DeleteTweet,
   UpdateTweet,
