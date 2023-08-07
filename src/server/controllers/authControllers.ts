@@ -11,7 +11,7 @@ const RegisterUser = asyncHandler(async (req: Request, res: Response) => {
   const { name, email, password} = req.body;
   //
   if (!email || !password || !name) {
-    res.status(404);
+    res.status(404);  
     throw new Error("Please fill in the valid credentails");
   }
   // check if the user exist
@@ -26,7 +26,6 @@ const RegisterUser = asyncHandler(async (req: Request, res: Response) => {
   const Tempuser = {
     email,
     password: hashedpassword,
-    ...req.body
   };
   const user = await User.create(Tempuser);
 
@@ -41,12 +40,40 @@ const RegisterUser = asyncHandler(async (req: Request, res: Response) => {
     { expiresIn: "2d" }
   );
 
-  res.status(200).json({ user, token });
+  res.status(200).json({ user });
 
 });
 
 const LoginUser = asyncHandler(async (req: Request, res: Response) => {
-  res.status(200).send('Login User');
+  const { email, password } = req.body;
+  if (!email || !password) {
+    res.status(404);
+    throw new Error("Please fill in the valid credentails");
+  } 
+  // Find the user in the database
+
+  const user = await User.findOne({ email });
+  if (!user) {
+    res.status(404);
+    throw new Error("The user does not exist");
+  }
+  const verifyPassword = await bcrypt.compare(password!, user.password!);
+  if (!verifyPassword) {
+    res.status(404);
+    throw new Error("Please provide a valid password");
+  }
+  const jwtcode:Secret = 'hello'
+  //
+  const token = jwt.sign(
+    {
+      userId: user._id,
+      role: user.role,
+    },
+    jwtcode,
+    { expiresIn: "2d" }
+  );
+
+  res.status(200).json({ user, token });
 });
 
 
