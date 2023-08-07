@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 // a structure of the user
 const UserSchema = new mongoose.Schema(
   {
-    username: {
+    name: {
       type: String,
     },
     display_name: {

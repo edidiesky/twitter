@@ -8,9 +8,9 @@ import User from "../models/User";
 // GET All User
 //  Public
 const RegisterUser = asyncHandler(async (req: Request, res: Response) => {
-  const { username, email, password, phone, country } = req.body;
+  const { name, email, password} = req.body;
   //
-  if (!email || !password) {
+  if (!email || !password || !name) {
     res.status(404);
     throw new Error("Please fill in the valid credentails");
   }
