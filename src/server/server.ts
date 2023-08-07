@@ -51,6 +51,6 @@ mongoose.connection.on('error', (error: Error) => console.log('Error'))
 app.use(NotFound);
 app.use(errorHandler);
 
-app.listen(5000, () => {
+app.listen(4000, () => {
   console.log("server is listening on port 4000");
 });

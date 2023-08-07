@@ -1,7 +1,8 @@
 // import bcrypt from "bcryptjs";
 import asyncHandler from "express-async-handler";
 import { Request, Response } from "express";
-import User from "server/models/User";
+import User from "../models/User";
+
 // GET All User
 //  Public
 const GetAllUser = asyncHandler(async (req: Request, res: Response) => {

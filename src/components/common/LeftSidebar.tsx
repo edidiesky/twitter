@@ -172,8 +172,8 @@ const LeftSidebarStyles = styled.div`
     li {
         border-radius: 40px;
   text-align: center;
-  padding: 1rem 2rem;
-  font-size: 21px;
+  padding: 1.2rem 2rem;
+  font-size: 20px;
   @media (max-width:1180px) {
     align-items: flex-end;
     justify-content: flex-end;

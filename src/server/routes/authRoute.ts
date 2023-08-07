@@ -8,6 +8,6 @@ import {
   LoginUser,
 } from "../controllers/authControllers";
 
-router.get("/register", authMiddleware, RegisterUser);
+router.post("/register", authMiddleware, RegisterUser);
 router.post("/login", authMiddleware, LoginUser);
 export default router;
