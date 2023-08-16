@@ -5,6 +5,7 @@ import { slideUp } from "../utils/framer";
 import { RxCross2 } from 'react-icons/rx'
 import FormInput from "../form/input";
 import Message from "../loaders/Message";
+import { useAppSelector } from "hooks/reduxtoolkit";
 
 type SetStateProp<T> = React.Dispatch<React.SetStateAction<T>>
 
@@ -18,6 +19,9 @@ const RegsiterModal: React.FC<modalType> = ({ modal, setModal }) => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [index, setIndex] = useState(0);
+
+  const { registerisLoading } = useAppSelector(store => store.auth)
+  // console.log(registerisLoading)
 
   return (
     <RegisterModalStyles
