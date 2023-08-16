@@ -11,10 +11,8 @@ type Rightbar = {
 
 const images = [
     './victor_1.jpg',
-    './victor_5.jpg',
-    './victor_3.jpg',
-    './victor_4.jpg',
-    './victor_4.jpg',
+    './victor_1.jpg',
+    './victor_1.jpg',
 ]
 
 const RightSidebarIndex: React.FC<Rightbar> = ({ types }) => {

@@ -26,10 +26,10 @@ const TopStyles = styled.div`
     color: #fff;
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.875);
+  background-color: var(--top);
   z-index: 30;
   /* padding: 1rem 0; */
-  backdrop-filter: blur(54px);
+  backdrop-filter: blur(12px);
   padding:1rem 0;
   border-bottom: 1px solid rgba(0,0,0,.1);
   /* backdrop-filter: c; */

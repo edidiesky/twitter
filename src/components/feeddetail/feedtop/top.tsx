@@ -27,7 +27,7 @@ width: 100%;
 color: #fff;
   position: sticky;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: var(--top);
   z-index: 30;
   padding: 1rem 0;
   backdrop-filter: blur(12px);

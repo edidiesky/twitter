@@ -146,7 +146,7 @@ const LeftSidebarStyles = styled.div`
   }
   .activeLink {
   font-weight: bold;
-  color: var(--blue-1);
+  color: var(--dark-1);
   transition: color 0.3s ease; /* or any other color to indicate the active link */
 }
     .btn {

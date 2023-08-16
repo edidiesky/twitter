@@ -7,7 +7,9 @@ const HomeIcon: React.FC<iconType> = ({ isClicked }) => {
         <span style={{
             width: "27px",
             height: "27px",
-            color: " rgba(231,233,234,1.00)",
+            // color: " rgba(231,233,234,1.00)",
+            color: "var(--dark-1)",
+
             position: "relative",
             fill: "currentcolor",
             display: "inline-block",

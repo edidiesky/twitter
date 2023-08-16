@@ -1,14 +1,14 @@
 export const chatData = [
     {
       id: 1,
-      image: "/user.jpeg",
+      image: "/images/user.jpeg",
       name: "Personal Finance ",
       username:'@WealthMotley',
       text: "Hi, how are you",
     },
     {
       id: 2,
-      image: "/user.jpeg",
+      image: "/images/user.jpeg",
       name: "Personal Finance ",
       username:'@WealthMotley',
     },

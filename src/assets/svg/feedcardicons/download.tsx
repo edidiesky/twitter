@@ -7,7 +7,8 @@ const DownloadIcon: React.FC<iconType> = ({ isClicked }) => {
         <span style={{
             width: "18px",
             height: "18px",
-            color: " rgba(231,233,234,1.00)",
+            color: "var(--dark-1)",
+
             position: "relative",
             fill: isClicked ? "blue" : "currentcolor",
             display: "inline-block",

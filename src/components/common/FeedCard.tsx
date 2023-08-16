@@ -17,13 +17,12 @@ const FeedCard = (props: feedcardtype) => {
         <FeedCardStyles key={props.tweet_id}>
             <div className={drop ? "dropdownCard  flex column active" : "dropdownCard  flex column"}>
                 <div onClick={() => setDrop(false)} className="dropdown_background"></div>
-                <ul onClick={() => setDrop(false)} className="flex column w-100 fs-14 text-bold">
+                <ul style={{fontSize:"14.6px"}} onClick={() => setDrop(false)} className="flex column w-100 text-bold">
                     <li className="flex item-center gap-1">Not interested in this tweet</li>
                     <li className="flex item-center gap-1">Follow Alexander</li>
                     <li className="flex item-center gap-1">Add or remove @Alexander form lists</li>
                     <li className="flex item-center gap-1">Mute Alexander</li>
                     <li className="flex item-center gap-1">Block Alexander</li>
-                    <li className="flex item-center gap-1">Mute tweet</li>
                     <li className="flex item-center gap-1">Report tweet</li>
                 </ul>
             </div>
@@ -115,7 +114,7 @@ const FeedCardStyles = styled.div`
         top: 8px;
         z-index: 40;
         cursor: pointer;
-        width: 350px;
+        width: 370px;
         border-radius: 10px;
         box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
         background-color: var(--white);
@@ -137,7 +136,7 @@ const FeedCardStyles = styled.div`
             background-color: transparent;
         }
         &.active {
-            height: 350px;
+            height: 300px;
             @media (max-width:400px) {
         width: 310px;
         height: 320px;

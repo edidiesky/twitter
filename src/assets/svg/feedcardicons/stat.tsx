@@ -7,7 +7,7 @@ const StatIcon: React.FC<iconType> = ({ isClicked }) => {
         <span style={{
             width: "20px",
             height: "20px",
-            color: " var(--grey-1)",
+            color: "var(--dark-1)",
             position: "relative",
             fill: isClicked ? "blue" : "currentcolor",
             display: "inline-block",
