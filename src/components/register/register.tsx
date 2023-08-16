@@ -7,10 +7,12 @@ import Link from 'next/link'
 import { FaFacebook, FaGithub } from "react-icons/fa";
 import RegsiterModal from "../modals/RegisterModal";
 import LoginModal from "../modals/LoginModal";
+import UsernameModal from "components/modals/UsernameModal";
 
 const Regsiters: React.FC = () => {
   const [registermodal, setRegisterModal] = useState(false)
   const [loginmodal, setLoginModal] = useState(false)
+  const [username, seUsername] = useState(true)
   return (
     <RegsiterStyles style={{ overflow: "hidden" }}>
       <AnimatePresence
@@ -29,6 +31,15 @@ const Regsiters: React.FC = () => {
       >
         {loginmodal && <LoginModal modal={loginmodal}
           setModal={setLoginModal} />}
+      </AnimatePresence>
+      {/* username modal */}
+      <AnimatePresence
+        initial={"false"}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {username && <UsernameModal modal={username}
+          setModal={seUsername} />}
       </AnimatePresence>
 
       <div className="w-100">

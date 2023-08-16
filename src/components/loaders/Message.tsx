@@ -30,7 +30,7 @@ const Message: React.FC<messageprops> = ({
           : "gap-1 flex item-center justify-space"
       }
     >
-      <div className=" flex1 fs-14 text-bold text-dark text-center">{alertText}</div>
+      <div className=" flex1 fs-14 text-bold text-center">{alertText}</div>
     </MessageContent>
   );
 }
@@ -41,12 +41,16 @@ const MessageContent = styled.div`
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
   background-color: rgb(3, 116, 192);
   z-index: 10000;
-  border-radius: 3px;
+  border-radius: 40px;
   font-size: 16px;
   font-weight: 600;
-  color: var(--dark-1);
+  color: var(--white);
   transition: all 0.6s;
   text-align:center;
+  position:fixed;
+  top:-100%;
+  left:50%;
+  transform:translateX(-50%);
   /* transform: translateY(-1000%); */
   /* top: 5%; */
 

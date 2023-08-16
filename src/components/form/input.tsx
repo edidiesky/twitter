@@ -27,18 +27,18 @@ const InputTextField = styled(TextField)(({ theme }) => ({
     fontSize: '16px',
     fontWeight: '400',
     fontFamily: 'CustomFont2_light, sans-serif',
-    color: "#fff"
+    color: "var(--dark-1)"
 
   },
   '& .MuiInputLabel-root': {
     fontSize: '17px',
     fontWeight: '400',
-    color:'var(--grey-1)'
+    color:'var(--dark-1)'
   },
   '& .MuiInputLabel-root.Mui-focused': {
     // Styles when the form is focused
     color: 'var(--blue-1)',
-    fontWeight: '400',
+    fontWeight: '600',
   },
   '& .MuiInputLabel-shrink': {
     transform: 'translate(12px, 6px) scale(0.75)',

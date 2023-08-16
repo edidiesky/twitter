@@ -30,10 +30,11 @@
   --blue-1: rgb(29, 155, 240);
   --grey-2: rgb(239, 243, 244);
   --white: #fff;
-  --border: rgba(0, 0, 0, 0.08);
+  --border: rgba(0, 0, 0, 0.1);
   --dark-grey: rgb(15, 20, 25);
   --top: rgba(255, 255, 255, 0.65);
   --dark-grey-hover: #f9f9f9d3;
+  --backdrop: rgba(0, 0, 0, 0.328);
 }
 /* :root {
   --white: #000000;
@@ -44,6 +45,8 @@
   --grey-1: rgb(113, 118, 123);
   --border: rgba(255, 255, 255, 0.11);
   --top:rgba(0, 0, 0, 0.65);
+  --backdrop:(0, 0, 0, 0.65);
+
 } */
 
 body {

@@ -245,7 +245,7 @@ const RegisterModalStyles = styled(motion.div)`
     }
   }
   .backdrop {
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--backdrop);
 
     position: absolute;
     height: 100%;
@@ -257,7 +257,7 @@ const RegisterModalStyles = styled(motion.div)`
   left:0;
   top:0;  
   top: 0;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: var(--top);
   z-index: 30;
   backdrop-filter: blur(12px);
   border-top-left-radius:20px;
