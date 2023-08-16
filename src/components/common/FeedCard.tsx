@@ -9,6 +9,11 @@ import RetweetIcon from 'assets/svg/feedcardicons/retweet';
 import LikeIcon from 'assets/svg/feedcardicons/like';
 import StatIcon from 'assets/svg/feedcardicons/stat';
 import MessageIcon from 'assets/svg/feedcardicons/message';
+import IntrestIcon from 'assets/svg/dropdownicons/interest';
+import FollowIcon from 'assets/svg/dropdownicons/follow';
+import ReportIcon from 'assets/svg/dropdownicons/report';
+import BlockIcon from 'assets/svg/dropdownicons/block';
+import MuteIcon from 'assets/svg/dropdownicons/mute';
 
 const FeedCard = (props: feedcardtype) => {
     const [tweet, setTweet] = useState(false)
@@ -17,13 +22,12 @@ const FeedCard = (props: feedcardtype) => {
         <FeedCardStyles key={props.tweet_id}>
             <div className={drop ? "dropdownCard  flex column active" : "dropdownCard  flex column"}>
                 <div onClick={() => setDrop(false)} className="dropdown_background"></div>
-                <ul style={{fontSize:"14.6px"}} onClick={() => setDrop(false)} className="flex column w-100 text-bold">
-                    <li className="flex item-center gap-1">Not interested in this tweet</li>
-                    <li className="flex item-center gap-1">Follow Alexander</li>
-                    <li className="flex item-center gap-1">Add or remove @Alexander form lists</li>
-                    <li className="flex item-center gap-1">Mute Alexander</li>
-                    <li className="flex item-center gap-1">Block Alexander</li>
-                    <li className="flex item-center gap-1">Report tweet</li>
+                <ul style={{ fontSize: "14.6px" }} onClick={() => setDrop(false)} className="flex column w-100 text-bold">
+                    <li className="flex item-center gap-1"><IntrestIcon /> Not interested in this tweet</li>
+                    <li className="flex item-center gap-1"><FollowIcon />  Follow Alexander</li>
+                    <li className="flex item-center gap-1"><MuteIcon /> Mute Alexander</li>
+                    <li className="flex item-center gap-1"><BlockIcon /> Block Alexander</li>
+                    <li className="flex item-center gap-1"><ReportIcon /> Report tweet</li>
                 </ul>
             </div>
             <AnimatePresence
@@ -116,7 +120,7 @@ const FeedCardStyles = styled.div`
         cursor: pointer;
         width: 370px;
         border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 10px var(--border);
         background-color: var(--white);
         height: 0;
         transition: all .3s;    
@@ -136,10 +140,10 @@ const FeedCardStyles = styled.div`
             background-color: transparent;
         }
         &.active {
-            height: 300px;
+            height: 250px;
             @media (max-width:400px) {
         width: 310px;
-        height: 320px;
+        height: 250px;
 
         }
             opacity:1;

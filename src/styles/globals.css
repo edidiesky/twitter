@@ -33,6 +33,7 @@
   --border: rgba(0, 0, 0, 0.08);
   --dark-grey: rgb(15, 20, 25);
   --top: rgba(255, 255, 255, 0.65);
+  --dark-grey-hover: #f9f9f9d3;
 }
 /* :root {
   --white: #000000;
