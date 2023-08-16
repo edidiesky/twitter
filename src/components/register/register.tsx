@@ -8,13 +8,16 @@ import { FaFacebook, FaGithub } from "react-icons/fa";
 import RegsiterModal from "../modals/RegisterModal";
 import LoginModal from "../modals/LoginModal";
 import UsernameModal from "components/modals/UsernameModal";
+import ProfilePictureModal from "components/modals/ProfilePicture";
 
 const Regsiters: React.FC = () => {
   const [registermodal, setRegisterModal] = useState(false)
   const [loginmodal, setLoginModal] = useState(false)
-  const [username, seUsername] = useState(true)
+  const [username, seUsername] = useState(false)
+  const [profile, setProfile] = useState(false)
   return (
     <RegsiterStyles style={{ overflow: "hidden" }}>
+      {/* register modal */}
       <AnimatePresence
         initial={"false"}
         exitBeforeEnter={true}
@@ -23,7 +26,7 @@ const Regsiters: React.FC = () => {
         {registermodal && <RegsiterModal modal={registermodal}
           setModal={setRegisterModal} />}
       </AnimatePresence>
-
+      {/* login modal */}
       <AnimatePresence
         initial={"false"}
         exitBeforeEnter={true}
@@ -41,6 +44,17 @@ const Regsiters: React.FC = () => {
         {username && <UsernameModal modal={username}
           setModal={seUsername} />}
       </AnimatePresence>
+
+        {/* profile modal */}
+        <AnimatePresence
+        initial={"false"}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {profile && <ProfilePictureModal modal={profile}
+          setModal={setProfile} />}
+      </AnimatePresence>
+
 
       <div className="w-100">
         <img src="https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png" alt="" className="image w-100 h-100" />
